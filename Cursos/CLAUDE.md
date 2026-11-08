@@ -19,4 +19,9 @@ Mientras no exista `kit-cursos/`, la referencia de todo lo que se dice aquí es 
 - **Un commit por módulo**, y `ESTADO.md` al día al terminar cada uno.
 - **Después de cada módulo, actualiza toda la documentación** del curso: índice, chuleta global, enlaces, diagramas, `ESTADO.md`, la documentación de las herramientas que cambien, plan, portada, roadmaps, módulos anteriores y proyecto, si les afecta.
 - **Para al terminar cada fase** para que el autor la revise.
-- **Un curso publicado en la academia antes de empezar el siguiente.**
+- **Los cursos se hacen para la academia**: si un curso necesita algo que la academia no admite, no se hace un apaño en el curso; primero se amplía la academia y `FORMATO.md` (desde sus proyectos) y después lo usa el curso.
+- **Retos al final de cada fase**: opcionales, para afianzar lo aprendido mezclando varios módulos, con solución en `<details>` verificada como el resto del código. Sin seguimiento y sin bloquear nada. Su formato exacto lo fija `FORMATO.md`.
+- Cada módulo dice **qué conviene saber antes**, con enlaces (aunque sean de otro curso), y termina con **preguntas de repaso**; los ejercicios llevan **pistas** plegadas antes de la solución. Su formato exacto lo fija `FORMATO.md`.
+- Todo curso tiene un **proyecto para el portfolio del alumno**, aunque sea pequeño.
+- Cada repositorio de curso lleva **licencia, `CONTRIBUTING.md` y `CHANGELOG.md`**, y cada versión publicada se etiqueta en Git.
+- **Se trabaja en paralelo lo que haga falta**: un curso, una sola sesión o persona a la vez. Los cambios en el kit o en `FORMATO.md` se hacen solo desde `kit-cursos/`.

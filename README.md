@@ -1,6 +1,6 @@
 # Proyecto Academia
 
-Todo lo necesario para la academia online de programación: la web de la academia y los cursos que publica.
+Todo lo necesario para una academia de programación **libre, gratuita y de código abierto** que funciona como un juego con DLC: la plataforma es el juego y cada curso es una expansión que se instala, se actualiza sin perder el progreso y que cualquiera puede crear. Todo gratis: la academia y los cursos.
 
 Esta carpeta **solo agrupa proyectos**. Cada proyecto de dentro es independiente y tiene su propio repositorio de Git, su `CLAUDE.md`, su plan y su estado. La propia carpeta es un repositorio pequeño que guarda solo la planificación común (este `README.md`, `CLAUDE.md`, `PLAN.md`, `ESTADO.md` y `Cursos/CLAUDE.md`).
 
@@ -12,7 +12,7 @@ Proyecto Academia/                ← planificación común (este repositorio)
 ├── Academia/                     ← proyecto: la web de la academia
 └── Cursos/                       ← agrupa todo lo de los cursos
     ├── CLAUDE.md                 ← reglas comunes a todos los cursos
-    ├── kit-cursos/               ← proyecto: herramientas internas para escribir y verificar cursos
+    ├── kit-cursos/               ← proyecto: formato y herramientas para escribir y verificar cursos
     ├── curso-inicial/            ← proyecto: el curso común que hace todo alumno
     ├── curso-java/               ← proyecto: Java de 0 a experto
     └── curso-…/                  ← un proyecto por curso
@@ -23,7 +23,7 @@ Hoy solo existe la planificación. Los proyectos se crean en el orden de [`PLAN.
 ## Cómo se relacionan
 
 - **Los cursos usan el kit** desde `../kit-cursos/`: una mejora del kit llega a todos los cursos.
-- **La academia importa cada curso** desde un commit fijo de `../Cursos/<curso>/` con su importador y guarda la copia en su carpeta de contenido. Nunca lee los cursos en directo.
+- **La academia instala cada curso** (como un DLC) desde una versión fija de `../Cursos/<curso>/` con su importador y guarda la copia en su carpeta de contenido, fuera de Git. Nunca lee los cursos en directo.
 - **Cada `CLAUDE.md` añade lo suyo** a los de las carpetas superiores: una sesión abierta en `Cursos/curso-sql/` lee las reglas generales, las de cursos y las de SQL; una abierta en `Academia/` no carga las de cursos.
 
 ## Dónde abrir cada sesión

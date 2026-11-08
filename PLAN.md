@@ -1,34 +1,70 @@
 # Plan del Proyecto Academia
 
-> Plan general, 8 de noviembre de 2026. Sale de la propuesta de nuevos cursos escrita al terminar el curso de Java (`PROPUESTA-NUEVOS-CURSOS.md` del curso original) y de lo decidido con el autor en la sesión de planificación de ese día.
+> Plan general, 8 de noviembre de 2026. Sale de la propuesta de nuevos cursos escrita al terminar el curso de Java (`PROPUESTA-NUEVOS-CURSOS.md` del curso original) y de las dos sesiones de planificación con el autor de ese día (la segunda revisó el plan entero: proyecto libre y gratuito, academia como «juego» y cursos como «DLC», pack base 1.0).
 > Dónde estamos y qué toca ahora: [`ESTADO.md`](ESTADO.md). Estructura y normas de la carpeta: [`README.md`](README.md).
 
 ## 1. Objetivo
 
-Montar una academia online de programación con muchos cursos que:
+Una **academia de programación libre, gratuita y de código abierto** que funciona como **un juego con DLC**:
 
-- **no repiten** lo básico: todo lo común está en un **curso inicial** que hace cualquier alumno;
-- comparten **la misma estructura, los mismos nombres y el mismo formato**, para que la academia los importe todos igual y el alumno encuentre siempre las cosas en el mismo sitio;
-- se escriben con **el mismo método** que el curso de Java original (plan, plantilla, verificación de todo el código, un commit por módulo, revisión del autor por fase), recogido en un **kit de herramientas**.
+- **La plataforma es el juego**: se instala una vez, con cuentas de usuario y seguimiento de lo estudiado.
+- **Cada curso es una expansión (DLC)**: vive en su propio repositorio, se instala en la academia en una versión concreta, se actualiza sin perder el progreso y **cualquiera puede crear el suyo**.
+- **Todo es gratis**: la plataforma y los cursos. No hay pagos, suscripciones ni partes de pago.
+
+Para quién y para qué:
+
+- El autor la usa para estudiar en su máquina; **cualquiera puede descargarla y usarla**; y es un **proyecto de portfolio** publicado en GitHub, donde se va viendo crecer versión a versión.
+- El autor trabaja **solo** por ahora, con una sesión de Claude por proyecto; el plan vale igual si mañana se suma más gente (apartado 2, decisión 18).
+
+Los cursos:
+
+- **No repiten** lo básico: lo común está en un **curso inicial** recomendado para todos.
+- Comparten **la misma estructura, nombres y formato**, porque **se hacen para la academia**: `FORMATO.md` define lo que la academia necesita y todo curso lo cumple.
+- Se escriben con **el mismo método** que el curso de Java original (plan, plantilla, verificación de todo el código, un commit por módulo, revisión del autor por fase), recogido en un **kit de herramientas**.
+
+**Regla para crecer:** añadir un curso nuevo **no requiere tocar el código de la academia**. Basta con crear su repositorio, escribirlo según `FORMATO.md`, pasar la comprobación del kit e instalarlo.
 
 El curso de Java original y Code Academy fueron el aprendizaje; este proyecto es lo de verdad y **aprovecha todo** lo que se construyó en ellos.
 
 ## 2. Decisiones tomadas (8 de noviembre de 2026)
 
+**Estructura y proyectos**
+
 1. **Estructura**: `Proyecto Academia/` agrupa `Academia/` y `Cursos/`; dentro de `Cursos/` van `kit-cursos/` y un proyecto por curso. Cada proyecto, su repositorio. La raíz es un repositorio pequeño con la planificación común. Rutas relativas siempre, para poder copiar la carpeta entera (ver `README.md`).
-2. **Kit de herramientas** (`Cursos/kit-cursos/`): interno, el alumno no lo ve. Los cursos lo usan desde `../kit-cursos/`, sin copiarlo. Se hace **lo justo** para el curso inicial y se mejora cuando lo pida el siguiente curso.
-3. **Curso inicial común** (`Cursos/curso-inicial/`, nombre público por decidir): lo único común a todos los cursos. Después, cada curso se puede hacer por separado.
-4. **Curso de Java nuevo** (`Cursos/curso-java/`, **opción A**): copia del curso de Java original **con su historial**, adaptada para empezar donde acaba el curso inicial y con la misma estructura que el resto de cursos. Cuando esté hecho no referencia ni necesita el original. Que es la segunda edición se dice en su `README.md` y su historial, no en el nombre.
-5. **Academia** (`Academia/`): copia de Code Academy **con su historial**, adaptada a varios cursos. Empieza **sin alumnos**, así que cada curso entra en ella desde cero (sin conflictos de progreso con la primera edición del curso de Java).
+2. **Kit de herramientas** (`Cursos/kit-cursos/`): los cursos lo usan desde `../kit-cursos/`, sin copiarlo. Se hace **lo justo** para el curso inicial y se mejora cuando lo pida el siguiente curso. Tiene **una parte mínima pública** (`FORMATO.md`, plantilla de curso y comprobador) para que cualquiera pueda crear un curso; las herramientas avanzadas (verificar todo el código, generar índices y chuletas) son el método del autor, públicas pero opcionales.
+3. **Curso inicial común** (`Cursos/curso-inicial/`, nombre público por decidir): lo común a todos los cursos. Es **recomendado**, no obligatorio.
+4. **Curso de Java nuevo** (`Cursos/curso-java/`, **opción A**): copia del curso de Java original **con su historial**, adaptada para empezar donde acaba el curso inicial y con la estructura común. Cuando esté hecho no referencia ni necesita el original. Que es la segunda edición se dice en su `README.md` y su historial, no en el nombre.
+5. **Academia** (`Academia/`): copia de Code Academy **con su historial**, que ya tiene hechos sus hitos H1 a H5 (apartado 8.5). Empieza **sin alumnos**.
 6. **Los proyectos de origen se quedan como archivo**: `Curso Java Completo` y `Code Academy` no se modifican.
-7. **Cursos grandes publicados por partes** en la academia, pero escritos y mantenidos como un solo curso (apartado 4).
-8. **Frontend con React y Angular** como caminos alternativos: primero React, Angular después.
-9. **La marca «Code Academy» se cambia antes de publicar**: se parece demasiado a Codecademy (conflicto de marca y visibilidad). El nombre se elige más adelante; la carpeta se llama `Academia/` para que el nombre no afecte a ninguna ruta.
-10. **Normas de trabajo**: un curso publicado en la academia antes de empezar el siguiente; el kit, lo justo; todo lo importante, escrito.
+
+**Producto**
+
+7. **Libre, gratuito y de código abierto**: la academia y los cursos. Licencias por decidir (apartado 10).
+8. **Acceso libre**: cualquier usuario puede estudiar el curso y el módulo que quiera. Los requisitos entre cursos y módulos son **recomendaciones**, nunca bloqueos.
+9. **Roadmaps opcionales**: rutas de aprendizaje dentro de un curso y entre cursos (por ejemplo, «Backend con Java: inicial → Java → SQL → Git a fondo → DevOps»). Se definen como datos, no como código.
+10. **Varios usuarios con cuentas** y seguimiento propio (por módulo, curso, parte y roadmap), con **roles de administrador y usuario** (apartado 8.5).
+11. **Diseñada como si fuera a desplegarse en internet**, aunque hoy se use en local. Tres niveles de uso con la misma aplicación: en tu máquina, en la red de casa y, en el futuro, en un servidor (apartado 8.5).
+12. **Los cursos se instalan como DLC**: el contenido no vive en el repositorio de la academia, sino que se instala desde el repositorio de cada curso en una versión concreta.
+13. **Los cursos se hacen para la academia**: `FORMATO.md` define lo que la academia necesita y todo curso lo cumple. Si un curso necesita algo que la academia no admite, primero se amplía la academia y el formato; después lo usa el curso.
+14. **Los cursos tienen versión** (etiqueta de Git y registro de cambios) y se pueden actualizar conservando el progreso (apartado 8.1).
+15. **Cursos grandes divididos en partes** para orientarse (Java, Python, frontend): tramos con nombre que sirven de piezas de los roadmaps. Sin precio, página aparte ni certificado (apartado 4).
+16. **Retos opcionales dentro de cada curso**, al final de cada fase, para afianzar lo aprendido. No son obligatorios, no se guarda si se han superado y no bloquean nada (apartado 8.1).
+17. **Frontend con React y Angular** como caminos alternativos: primero React, Angular después.
+
+**Forma de trabajar y publicar**
+
+18. **Se trabaja en paralelo lo que haga falta, según la gente disponible.** Cada proyecto (academia, kit o curso) lo lleva una sola sesión o persona a la vez. Los cambios en el kit y en `FORMATO.md` se hacen solo desde el proyecto del kit, y los demás los recogen después. Cada curso pasa la revisión de su responsable antes de publicarse.
+19. **Pack base 1.0 primero**: **la academia más el DLC del curso inicial**, ya instalado, porque una academia sin cursos no sirve. El curso inicial es un DLC como los demás (su repositorio, su versión, el mismo instalador); solo viene de serie. Así el sistema de DLC queda probado desde el primer día. El curso de Java es el primer DLC que se publica aparte; después, el resto (apartado 7).
+20. **Se publica en GitHub según se avanza**, con versiones y *releases*, registro de cambios y una hoja de ruta pública en el README de la academia.
+21. **La marca «Code Academy» se cambia**: se confunde con Codecademy. No hace falta registrarla; basta con un nombre libre en GitHub (y, si se quiere, como dominio). Se decide **antes del primer `push`**, porque el nombre del repositorio es la marca. La carpeta se llama `Academia/` para que el nombre no afecte a ninguna ruta.
+22. **Presentación en el portfolio con la metáfora del juego y los DLC**, dejando claro desde la primera línea que todo es gratis. En la documentación técnica y el código se dice «curso» o «paquete de curso», no DLC.
+23. **Normas de trabajo**: el kit, lo justo; todo lo importante, escrito.
 
 ## 3. El catálogo de cursos
 
-### 3.1. Qué pide cada curso para empezar
+### 3.1. Qué conviene saber antes de cada curso
+
+Son recomendaciones: cualquier curso se puede empezar sin haber hecho los anteriores.
 
 ```mermaid
 flowchart TD
@@ -46,7 +82,7 @@ flowchart TD
     JAVA --> ARQ["Arquitectura y microservicios"]
 ```
 
-| Curso | Pide | Tamaño aprox. (módulos) |
+| Curso | Conviene saber antes | Tamaño aprox. (módulos) |
 |---|---|---|
 | **Curso inicial común** | Nada | 31 |
 | **Java de 0 a experto** | Curso inicial | unos 190 (ya escritos) |
@@ -61,7 +97,7 @@ flowchart TD
 | **Kotlin para desarrolladores Java** | Curso inicial y saber Java | 50-70 |
 | **Arquitectura y microservicios** | Curso inicial y saber Java | 50-70 |
 
-«Saber Java» puede venir de nuestro curso o de otro sitio. «Spring Boot para quien ya sabe Java» no es un curso aparte: es la **parte 4 del curso de Java** publicada por separado.
+«Saber Java» puede venir de nuestro curso o de otro sitio. «Spring Boot para quien ya sabe Java» no es un curso aparte: es la **parte 4 del curso de Java**.
 
 ### 3.2. Los cursos, uno a uno
 
@@ -87,7 +123,7 @@ Ver el apartado 6.
 - **Público:** cualquiera que programe. Lo básico de Git está en el curso inicial; este es el siguiente paso.
 - **Temario esbozado:** Git por dentro (commits, árboles, referencias) · reescribir y reparar el historial (`rebase`, `cherry-pick`, `bisect`, `reflog`) · formas de trabajar en equipo (*trunk-based*, *GitHub Flow*, *Git Flow*) · *pull requests*, revisión de código, *issues*, proyectos, protección de ramas · GitHub Actions básico · seguridad (secretos filtrados, `gitleaks`, commits firmados) · colaborar en código abierto · caso real en equipo.
 - **Reutiliza:** los módulos de Git del curso de Java y la sesión de `gitleaks` de su fase 20.
-- **Por qué:** corto, útil para todos y buena puerta de entrada (incluso gratuito).
+- **Por qué:** corto, útil para todos y buena puerta de entrada.
 
 #### Python
 
@@ -132,7 +168,7 @@ flowchart TD
 | 4a. React / 4b. Angular | Componentes, estado, rutas, formularios, APIs REST, JWT, pruebas y despliegue | Hace aplicaciones web completas |
 
 - React y Angular son **caminos alternativos**; las dos partes hacen la misma aplicación contra la misma API y se puede cerrar con «React frente a Angular».
-- **Primero React** (más demanda general) y **Angular después**, según lo que pidan los alumnos (muy usado en España en empresas con backend Java).
+- **Primero React** (más demanda general) y **Angular después** (muy usado en España en empresas con backend Java).
 - Lo caro es mantenerlos: Angular saca versión importante cada seis meses y React cambia sus recomendaciones a menudo.
 - **Reutiliza:** la fase 10 del curso de Java, `paginas.py`, `navegador.py` y las APIs del proyecto evolutivo.
 - Las partes 1 y 2 sirven también por separado.
@@ -147,7 +183,7 @@ flowchart TD
 
 - **Temario esbozado:** LLM para programadores (tokens, contexto, temperatura, coste) · prompts como código · salida estructurada · *function calling* · RAG de verdad (troceado, *embeddings*, almacenes vectoriales, recuperación híbrida, reordenación) · evaluación y pruebas automáticas · agentes · MCP (cliente y servidor) · memoria de conversación · seguridad (inyección de *prompts*, datos sensibles) · Ollama frente a modelos de pago · observabilidad · despliegue · proyecto final: un asistente para una empresa ficticia.
 - **Reutiliza:** la fase 19 del curso de Java, `modelos_ia.py` y el proyecto evolutivo. Da por sabido el módulo «Qué es la IA» del curso inicial.
-- **Decisiones pendientes:** requisito exacto (¿saber Java o hasta la parte 4, Spring Boot?) · ¿solo modelos locales o también de pago? (propuesta: locales para los ejemplos verificados y de pago como alternativa explicada) · almacén vectorial (propuesta: PGvector) · proyecto evolutivo (propuesta: el asistente de la empresa ficticia del curso de Java).
+- **Decisiones pendientes:** qué conviene saber antes exactamente (¿saber Java o hasta la parte 4, Spring Boot?) · ¿solo modelos locales o también de pago? (propuesta: locales para los ejemplos verificados y de pago como alternativa explicada) · almacén vectorial (propuesta: PGvector) · proyecto evolutivo (propuesta: el asistente de la empresa ficticia del curso de Java).
 - **Problema que hay que resolver antes de escribir:** las respuestas de un modelo no son siempre iguales. La fase 19 da la pista: modelos locales fijos, temperatura baja, salida estructurada comprobada por su forma y no por su texto, y partes variables. Se diseña y se prueba antes del primer módulo.
 
 #### Entrevistas técnicas en Java
@@ -159,23 +195,23 @@ flowchart TD
 #### Kotlin para desarrolladores Java
 
 - **Temario esbozado:** de Java a Kotlin · colecciones y funcional · corrutinas frente a hilos virtuales · interoperabilidad · Gradle con Kotlin DSL · Spring Boot con Kotlin · testing (JUnit, MockK, Kotest) · el proyecto evolutivo en Kotlin.
-- **Demanda media**; no corre prisa. **Alternativa a valorar** con datos de la academia: «Kotlin desde cero», que solo pediría el curso inicial (público de Android).
+- **Alternativa a valorar:** «Kotlin desde cero», que solo recomendaría el curso inicial (público de Android).
 
 #### Arquitectura de software y microservicios
 
 - **Temario esbozado:** diseño a escala · DDD · hexagonal y limpia · monolito modular (Spring Modulith) · microservicios: cuándo sí y cuándo no · eventos, *outbox*, sagas, CQRS · resiliencia · observabilidad · Kubernetes · seguridad entre servicios · ADR · caso real.
-- **Reutiliza:** las fases 16, 17 y 18 del curso de Java. Curso premium para perfiles senior.
+- **Reutiliza:** las fases 16, 17 y 18 del curso de Java. Para perfiles senior.
 
 #### Lógica de programación para jóvenes
 
-- Para adolescentes o principiantes que se asustan con un curso largo. Reutiliza la primera fase del curso inicial con otro tono, más juego y menos teoría. Solo si la academia quiere ir a ese público.
+- Para adolescentes o principiantes que se asustan con un curso largo. Reutiliza la primera fase del curso inicial con otro tono, más juego y menos teoría.
 
 ## 4. Cursos por partes
 
-- El curso se **escribe y se mantiene como uno solo** (un repositorio, una verificación, un proyecto evolutivo) y se **publica por partes** en la academia, cada una con su página, su certificado y, si se quiere, su precio. Cada parte dice qué hay que saber para empezarla.
+- El curso se **escribe y se mantiene como uno solo** (un repositorio, una verificación, un proyecto evolutivo) y se **divide en partes con nombre** para orientarse: alguien puede decir «quiero estudiar Spring Boot» y ver por dónde empezar y qué conviene saber antes.
+- Las partes son **piezas de los roadmaps** (por ejemplo, «inicial → Java parte 1 → SQL → Java parte 4»). No tienen precio, página aparte ni certificado; la academia muestra el avance de cada una.
 - No se divide en «básico, intermedio y avanzado», sino **por lo que se aprende**.
 - **Se dividen:** Java, Python y frontend. **Quizá:** arquitectura y Kotlin, si pasan de unos 60 módulos. **No:** curso inicial, SQL, Git, entrevistas e IA con Java.
-- **Pendiente:** qué ve un alumno que compra una parte y encuentra referencias a otras partes que no tiene.
 
 **Borrador para Java** (por los nombres de las fases; hay que comprobar que cada corte cae en un sitio natural):
 
@@ -202,7 +238,7 @@ Si no, va al curso que lo use. Ejemplo: el despliegue cumple la 1 pero no la 2, 
 
 ### 5.2. Temario: 8 fases y 31 módulos
 
-Con la estructura común, las agrupaciones del curso inicial son **fases** (`fase-01-…` a `fase-08-…`), como en todos los cursos.
+Con la estructura común, las agrupaciones del curso inicial son **fases** (`fase-01-…` a `fase-08-…`), como en todos los cursos. Cada fase termina con sus **retos opcionales** (apartado 8.1); qué tipo de retos lleva depende de la decisión 5 del apartado 10 (pseudocódigo o un lenguaje real).
 
 ♻️ = se adapta del curso de Java original (número de módulo original) · 🆕 = nuevo
 
@@ -263,24 +299,25 @@ Unos **19 se adaptan** y unos **12 son nuevos de verdad**.
 - **Qué es una base de datos:** qué es, tablas frente a documentos, para qué sirve cada tipo. Sin SQL.
 - **Las piezas de una aplicación:** frontend, backend, base de datos, API y nube con un ejemplo real (comprar en una tienda online) · un programa entero o varios que se hablan · **qué es desplegar** (servidor, dominio, *hosting*, nube) · **qué curso de la academia enseña cada pieza** (orienta al alumno sobre qué hacer después).
 - **Qué es la IA:** un modelo de lenguaje predice texto, no «sabe» · alucinaciones · contexto y por qué no siempre responde igual · privacidad (qué no pegar nunca en un chat de IA) · nube frente a local. Sin APIs, RAG ni agentes.
-- **Cómo estudiar:** teoría, ejemplos, ejercicios y chuletas; sesiones cortas, descansos, registro de lo aprendido.
+- **Cómo estudiar:** teoría, ejemplos, ejercicios, retos y chuletas; sesiones cortas, descansos, registro de lo aprendido; cómo usar la academia (acceso libre, roadmaps, seguimiento).
 - **Organizar tu trabajo:** dividir un problema en tareas · tablero Kanban · GitHub Issues y Projects · que existen Trello, Notion y Jira. Sin Scrum.
 - **Buscar ayuda:** documentación oficial, buscadores, foros, cómo hacer una buena pregunta.
 - **Programar con asistentes de IA:** pedir bien · comprobar siempre lo que da (con los casos de prueba de la fase 1) · usarla como profesor y no para que haga los deberes · normas de la academia sobre la IA (las decide el autor).
 - **Seguridad básica:** contraseñas, doble factor, no subir secretos a GitHub.
-- **Proyecto final:** un repositorio propio **planificado con *issues* en un tablero de GitHub**, con README en Markdown, datos en JSON, un diagrama en Mermaid, historial en Git y **publicado en GitHub Pages** (obligatorio: el alumno termina con algo suyo en internet).
+- **Proyecto final:** un repositorio propio **planificado con *issues* en un tablero de GitHub**, con README en Markdown, datos en JSON, un diagrama en Mermaid, historial en Git y **publicado en GitHub Pages** (obligatorio: el alumno termina con algo suyo en internet). Es el proyecto para el portfolio del alumno que pide el contrato (apartado 8.1).
 
 ### 5.4. Para que no se haga largo
 
-- **Prueba de nivel** al principio de cada fase: si la supera, se la salta (función de la academia).
-- **Fases imprescindibles** (1, 2, 3, 5 y 8) y **recomendadas** (4, 6 y 7), que se pueden hacer en paralelo con el curso siguiente.
+- **Fases imprescindibles** (1, 2, 3, 5 y 8) y **recomendadas** (4, 6 y 7), que se pueden hacer en paralelo con el curso siguiente. Con el acceso libre, quien ya sepa algo se salta la fase sin más.
 - **Está en el límite de tamaño.** Lo que se añada debería sustituir algo o ir como «recomendado».
 
 ## 6. El curso de Java nuevo (`curso-java/`)
 
+Es el **primer DLC** después del pack base (apartado 7).
+
 ### 6.1. Adaptar, no empezar de cero
 
-Del curso original sale una parte pequeña; el resto se queda. Adaptando se conserva lo verificado (código compilado, salidas comprobadas, versiones, la revisión del autor fase a fase) y no se pierden ajustes por el camino. Empezar de cero solo compensaría si cambiara la estructura, el enfoque o la base (eso sería una tercera edición, con datos de la academia).
+Del curso original sale una parte pequeña; el resto se queda. Adaptando se conserva lo verificado (código compilado, salidas comprobadas, versiones, la revisión del autor fase a fase) y no se pierden ajustes por el camino. Empezar de cero solo compensaría si cambiara la estructura, el enfoque o la base (eso sería una tercera edición).
 
 ### 6.2. Qué va a cada sitio
 
@@ -298,48 +335,55 @@ Del curso original sale una parte pequeña; el resto se queda. Adaptando se cons
 ### 6.3. Cómo
 
 1. Crear `Cursos/curso-java/` **clonando el curso original con su historial**, sin tocar el original.
-2. Quitar lo que pasa al inicial y rehacer el arranque: el curso empieza por instalar el JDK y pide «haber hecho el curso inicial».
+2. Quitar lo que pasa al inicial y rehacer el arranque: el curso empieza por instalar el JDK y recomienda «haber hecho el curso inicial».
 3. Recortar la parte general de los módulos de la tabla y enlazar al inicial (con el formato de enlace entre cursos del contrato, apartado 8.1).
 4. Donde se explica JSON, XML o YAML por primera vez (Maven, web, Spring, despliegue), resumir y enlazar al inicial.
 5. Revisar enlaces y menciones a lo quitado: medido el 8 de noviembre de 2026, **66 ficheros con 226 enlaces** a las fases 00 y 01 y **unas 70 menciones en el texto** («fase 0», «módulo 01.x»). Los enlaces los señala la comprobación de enlaces; las menciones hay que leerlas una a una (lo más incierto de la adaptación).
-6. Ponerlo con la estructura común del `FORMATO.md` y que pase la comprobación de la academia.
+6. Ponerlo con la estructura común del `FORMATO.md` (incluidas las secciones nuevas del módulo y los retos de cada fase) y que pase la comprobación de la academia.
 7. Índice, chuleta, roadmaps, ruta mínima, proyecto y verificación entera, como en un cierre de fase.
 8. Su `README.md` dice que es la segunda edición; a partir de ahí no referencia el curso original.
 
 ## 7. Orden de trabajo
 
-Es el orden en que se hacen las cosas, no el que sigue el alumno.
+Es el orden en que se hacen las cosas, no el que sigue el alumno. Se trabaja en paralelo lo que haga falta (decisión 18).
 
 | # | Qué | Dónde | Por qué en este puesto |
 |---|---|---|---|
-| 0 | **Contrato de formato** | Sesión en esta carpeta | Decisiones que afectan a cursos y academia (apartado 8.1); evita rehacer el kit o la academia |
-| 1 | **Kit de herramientas** | `Cursos/kit-cursos/` | Hace falta para escribir cualquier curso. Lo justo |
-| 2 | **Curso inicial** | `Cursos/curso-inicial/` | Lo hace todo alumno; además prueba el kit fuera de Java |
-| 3 | **Curso de Java** | `Cursos/curso-java/` | Empieza donde acaba el inicial |
-| 4 | **Academia** | `Academia/` | En paralelo con 2 y 3: copia de Code Academy adaptada a varios cursos (apartado 8.5) |
-| 5 | **SQL** | `Cursos/curso-sql/` | Rápido, solo pide el inicial, atrae público nuevo |
-| 6 | **Git y GitHub a fondo** | `Cursos/curso-git/` | Corto, amplía público |
-| 7 | **Python, partes 1 y 2** | `Cursos/curso-python/` | El lenguaje más demandado |
-| 8 | **IA aplicada con Java** | `Cursos/curso-ia-java/` | Siguiente paso tras Java, con el kit ya rodado |
-| 9 | **Entrevistas en Java** | `Cursos/curso-entrevistas-java/` | Corrección automática, mucha reutilización |
-| 10 | **Según lo que pida la academia** | | Frontend (React y luego Angular) · Kotlin · Arquitectura · ramas de Python · DevOps |
-| 11 | **Si hay demanda** | | Lógica para jóvenes |
+| 0 | **Contrato de formato** (unas dos sesiones) | Sesión en esta carpeta | Decisiones que afectan a cursos y academia (apartado 8.1); evita rehacer el kit o la academia |
+| 1 | **Kit mínimo** y **fase 1 del curso inicial** | `Cursos/kit-cursos/` y `Cursos/curso-inicial/` | Hace falta para escribir cualquier curso. Lo justo |
+| 2 | **Prueba de importación** | Copia de la academia | Importar la fase 1 del inicial para comprobar pronto que el formato funciona, antes de escribir el resto |
+| 3 | **Resto del curso inicial** y **academia** | `Cursos/curso-inicial/` y `Academia/`, en paralelo | La academia se adapta ya con un curso real; antes, el autor la usa para estudiar (hito H6 de Code Academy) |
+| 4 | **Pack base 1.0 publicado en GitHub** | | La academia más el DLC del curso inicial, con licencias, README y revisión previa (apartado 8.6) |
+| 5 | **Curso de Java**, primer DLC | `Cursos/curso-java/` | Empieza donde acaba el inicial y casi todo está escrito |
+| 6 | **SQL** | `Cursos/curso-sql/` | Rápido, solo recomienda el inicial, atrae público nuevo |
+| 7 | **Git y GitHub a fondo** | `Cursos/curso-git/` | Corto, amplía público |
+| 8 | **Python, partes 1 y 2** | `Cursos/curso-python/` | El lenguaje más demandado |
+| 9 | **IA aplicada con Java** | `Cursos/curso-ia-java/` | Siguiente paso tras Java, con el kit ya rodado |
+| 10 | **Entrevistas en Java** | `Cursos/curso-entrevistas-java/` | Corrección automática, mucha reutilización |
+| 11 | **Según el interés del autor** | | Frontend (React y luego Angular) · Kotlin · Arquitectura · ramas de Python · DevOps |
+| 12 | **Si apetece** | | Lógica para jóvenes |
 
-Los nombres de las carpetas de los cursos futuros son orientativos. **Un curso publicado en la academia antes de empezar el siguiente.**
+Los puestos 6 a 12 son orientativos, igual que los nombres de las carpetas de los cursos futuros. Cada curso y cada versión de la academia se publican en GitHub con su versión.
 
 ## 8. Cómo se hace cada paso
 
 ### 8.1. Paso 0: el contrato de formato
 
-Una sesión en esta carpeta, con acceso de solo lectura a `../Curso Java Completo/` y `../Code Academy/`, para escribir el **`FORMATO.md`** que cumplirán todos los cursos y que la academia sabrá importar. Parte de lo que ya funciona: la estructura del curso de Java y el manifiesto de Code Academy.
+Una o dos sesiones en esta carpeta, con acceso de solo lectura a `../Curso Java Completo/` y `../Code Academy/`, para escribir el **`FORMATO.md`** que cumplirán todos los cursos y que la academia sabrá instalar.
+
+- **Manda la academia**: el contrato recoge lo que la academia necesita para importar y mostrar un curso. El curso de Java original sigue siendo el modelo de estructura, porque Code Academy se hizo a su medida.
+- **No parte de cero**: formaliza y amplía el manifiesto de Code Academy (`docs/manifiesto.md`, versión 2).
+- **Se escribe para que lo lea cualquiera**, no solo las sesiones de Claude, porque es la base para que otras personas creen cursos.
+- **Lleva versión.** Cuando cambia, se anota qué cursos hay que poner al día. Solo se cambia desde el proyecto del kit.
+- **Deja sitio a todo lo que vendrá** (roadmaps, equivalencias, corrección automática, conceptos), aunque el pack base 1.0 solo implemente lo imprescindible.
 
 **Lo que la academia ya exige hoy** (visto en Code Academy el 8 de noviembre de 2026):
 
 - Un importador sin conexión (`backend/content-import`) copia el curso **desde un commit fijo** a una carpeta de contenido con un `manifest.json`; nunca lee el curso en directo. La ruta del curso se le pasa como argumento.
-- El manifiesto da **identificadores permanentes** a fases, lecciones, ejercicios, recursos y etapas; el progreso de los alumnos va con ellos. Quitar lecciones, cambiar el título de un ejercicio o dividir una lección son **conflictos** que rechazan la importación.
-- Admite **varios cursos**, cada uno con su prefijo de identificadores.
+- El manifiesto da **identificadores permanentes** con prefijo de curso (`java-02.01`, `java-phase-02`) a fases, lecciones, ejercicios, recursos y etapas; el progreso de los alumnos va con ellos.
+- Una herramienta de actualización (`backend/content-update`) **compara antes de aplicar**. Admite altas, ejercicios nuevos y cambios de orden o de fase; **rechaza** retítulos, retiradas, divisiones, fusiones e identidades ambiguas, y no traslada progreso.
 - `00-indice.md` con encabezados `## Fase NN — Título`.
-- En cada módulo, la sección exacta **«Ejercicios prácticos resueltos»**, con **«Ejercicio N · Título»** y la solución en `<details>`.
+- En cada módulo, la sección exacta **«Ejercicios prácticos resueltos»**, con **«Ejercicio N · Título»** y la solución en `<details>`. El título del ejercicio es su identidad: el importador es muy estricto con esta sección.
 - Enlaces relativos que se puedan resolver, carpetas de código (las convierte en ZIP) e imágenes PNG, JPG o SVG locales.
 - Mermaid con límites: sin negrita ni cursiva en las etiquetas y solo las entidades `&quot;`, `&lt;`, `&gt;` y `&amp;`.
 - Etapas del proyecto evolutivo aparte de las lecciones (un curso puede no tener proyecto).
@@ -348,13 +392,29 @@ Una sesión en esta carpeta, con acceso de solo lectura a `../Curso Java Complet
 **Lo que hay que decidir en el contrato:**
 
 1. **Estructura común** de carpetas y nombres, copiada del curso de Java (incluidos los nombres exactos de la chuleta global, los roadmaps y la ruta mínima).
-2. **Enlaces entre cursos** (lo más importante): cómo enlaza el curso de Java a un módulo del curso inicial de forma que funcione en GitHub, que el kit lo compruebe y que la academia lo convierta en un enlace a la lección del otro curso. Hoy el importador solo resuelve enlaces dentro del mismo curso.
+2. **Enlaces entre cursos** (lo más importante): cómo enlaza el curso de Java a un módulo del curso inicial de forma que funcione en GitHub, que el kit lo compruebe y que la academia lo convierta en un enlace a la lección del otro curso. Hoy el importador solo resuelve enlaces dentro del mismo curso. Con el acceso libre, son lo que permite entrar a un módulo suelto sin perderse.
 3. **Nombres estables**: cerrar temario y nombres de fichero antes de escribir; cómo se anota un renombrado.
-4. **Datos de cada módulo** que pueda leer la academia (tiempo estimado, nivel, requisitos, parte a la que pertenece) y dónde van.
-5. **Sitio para los tests de los ejercicios**, para que la corrección automática sea posible en el futuro sin romper los cursos que no la usen.
-6. Qué comprueba el kit para asegurar que un curso **se puede importar** en la academia.
+4. **Datos de cada módulo** que pueda leer la academia y dónde van: tiempo estimado, nivel, parte a la que pertenece y **«qué conviene saber antes»**, con enlaces a módulos de cualquier curso. Dejar sitio para declarar **conceptos** (por si en el futuro se cruzan con el glosario).
+5. **Secciones fijas del módulo**, sobre la plantilla actual (Qué aprenderás · Teoría · Ejemplos · Errores típicos · Buenas prácticas · Ejercicios prácticos resueltos · Chuleta):
+   - **Objetivos** al principio (la sección «Qué aprenderás» ya existe) y **qué conviene saber antes**.
+   - **Pistas** plegadas entre el enunciado y la solución de cada ejercicio.
+   - **Preguntas de repaso** al final, de autoevaluación, con formato fijo para que la academia pueda mostrarlas como test.
+6. **Retos al final de cada fase**: una sección con nombre exacto (propuesta: «Retos para afianzar») y encabezados «Reto N · Título», con solución en `<details>` y, si se quiere, pistas. Mezclan lo aprendido en varios módulos de la fase, son **opcionales** y **sin seguimiento**: el importador no debe confundirlos con ejercicios ni guardarles estado. El kit verifica sus soluciones como cualquier código del curso.
+7. **Sitio para los tests de los ejercicios**, para que la corrección automática sea posible en el futuro sin romper los cursos que no la usen.
+8. **Proyecto para el portfolio del alumno** obligatorio en todo curso, aunque sea pequeño (el proyecto evolutivo en Java; el repositorio en GitHub Pages en el inicial).
+9. **Glosario común**: los términos se definen una vez (casi siempre en el curso inicial) y los demás cursos enlazan a la definición. Dónde vive y cómo se enlaza.
+10. **Roadmaps entre cursos**: dónde y en qué formato se definen. Propuesta: un fichero común de datos que la academia importa, legible también en GitHub.
+11. **Versiones de los cursos**:
+    - Cada curso tiene versión (etiqueta de Git, por ejemplo `v1.2.0`) y registro de cambios (`CHANGELOG.md`). Esa etiqueta es lo que se instala en la academia.
+    - **Cambios menores** (erratas, mejoras de texto, ejercicios o módulos nuevos): se reinstalan sin más.
+    - **Cambios de estructura** (renombrar, dividir, unir o retirar módulos): se permiten si el curso trae un **fichero de equivalencias** (identificador viejo → nuevo) para trasladar el progreso. Un módulo retirado se marca como retirado, no se borra, y quien lo hizo lo conserva en su historial.
+    - **Edición nueva** (curso reescrito): puede convivir con la anterior o sustituirla, con equivalencias donde se pueda.
+    - Antes de cerrarlo, leer `docs/actualizacion-contenido.md` de Code Academy.
+12. **Ficheros obligatorios de cada repositorio de curso**: `README.md`, licencia, guía de contribución (`CONTRIBUTING.md`) y `CHANGELOG.md`.
+13. Qué comprueba el kit para asegurar que un curso **se puede instalar** en la academia, con **mensajes de error claros** («al módulo 03.02 le falta la sección de ejercicios», no solo «importación rechazada»).
+14. **Tipo de paquete**: de momento solo «curso», pero con el campo previsto por si algún día hay otros.
 
-Los puntos 4 y 5 implican cambios en el importador de la academia: se deciden pensando en los dos lados.
+Los puntos 2, 4, 6, 7, 10 y 11 implican cambios en el importador de la academia: se deciden pensando en los dos lados.
 
 ### 8.2. Paso 1: el kit de herramientas
 
@@ -364,7 +424,8 @@ Los puntos 4 y 5 implican cambios en el importador de la academia: se deciden pe
 kit-cursos/
 ├── README.md                 ← cómo arrancar un curso nuevo, paso a paso
 ├── FORMATO.md                ← el contrato del paso 0
-├── plantillas/               ← CLAUDE.md, PLAN-CURSO.md, ESTADO.md y módulo tipo, con huecos
+├── plantillas/               ← CLAUDE.md, PLAN-CURSO.md, ESTADO.md, módulo tipo, retos de fase,
+│                               README, licencia, CONTRIBUTING y CHANGELOG, con huecos
 └── herramientas/
     ├── README.md
     ├── nucleo/               ← verificar_codigo, generar_modulo, generar_indice, generar_chuleta_global,
@@ -372,9 +433,10 @@ kit-cursos/
     ├── servicios/            ← bases_de_datos, contenedores, servidor_linux, plataformas,
     │                           paginas, navegador, modelos_ia
     ├── lenguajes/            ← un ejecutor por lenguaje: java, sql, node… (python, kotlin, typescript cuando hagan falta)
-    └── formato_academia.py   ← comprueba que un curso cumple FORMATO.md y se puede importar
+    └── formato_academia.py   ← comprueba que un curso cumple FORMATO.md y se puede instalar
 ```
 
+- **Parte mínima pública** (`FORMATO.md`, plantilla y `formato_academia.py`): documentada para personas, sencilla y sin instalar nada raro. Es lo único que necesita quien quiera crear su curso.
 - La pieza difícil es **`verificar_codigo.py`** (unas 1.500 líneas): mezcla lo genérico (bloques del módulo, comparación con `codigo/`, salidas, partes variables, código sin enlazar) con lo de Java (`javac`, Maven, Gradle, JUnit, JavaFX, Swing, Spring Boot). Se separa en un núcleo y **ejecutores** con una interfaz pequeña: «¿este fichero es mío?», «compílalo», «ejecútalo y dame su salida», «ejecuta sus pruebas». Los ejecutores de SQL, Node, páginas, Compose, Linux y plataformas ya están casi separados.
 - **Lo justo:** separar solo lo que necesite el curso inicial (más comprobadores de formatos para sus ejercicios: JSON, YAML, XML, CSV, Markdown, y quizá comandos de terminal) y mejorarlo cuando lo pida el siguiente curso.
 - **Prueba de fiabilidad:** sobre una copia del curso de Java, el kit debe dar el mismo resultado que las herramientas originales.
@@ -384,15 +446,16 @@ kit-cursos/
 
 ### 8.3. Paso 2: arrancar cualquier curso con el kit
 
-1. Crear el repositorio en `Cursos/` y rellenar las plantillas.
+1. Crear el repositorio en `Cursos/` y rellenar las plantillas (incluidos licencia, `CONTRIBUTING.md` y `CHANGELOG.md`).
 2. Decisiones generales con el autor: público, profundidad, versiones exactas, herramientas, IDE, idioma de los identificadores.
 3. Verificar versiones en la documentación oficial y anotarlas con su fecha.
-4. Temario completo, fase a fase y módulo a módulo, con tiempos y el proyecto evolutivo; **nombres de fichero cerrados**.
+4. Temario completo, fase a fase y módulo a módulo, con tiempos, retos de cada fase y el proyecto para el portfolio; **nombres de fichero cerrados**.
 5. Revisión del autor del plan entero antes de escribir nada.
 6. Ejecutor del lenguaje, si no existe, con sus pruebas y documentado.
 7. Primera fase y **parar** para que el autor revise estilo, profundidad y formato.
 8. El resto, fase a fase, con las reglas de `Cursos/CLAUDE.md`.
-9. Importarlo y publicarlo en la academia antes de empezar el siguiente curso.
+9. Si el curso necesita algo que la academia no admite, **primero se amplía la academia y `FORMATO.md`** (desde sus proyectos) y después lo usa el curso.
+10. Etiquetar la versión, instalarlo en la academia y publicarlo en GitHub.
 
 ### 8.4. Paso 3: el curso de Java
 
@@ -400,14 +463,83 @@ Ver el apartado 6.3.
 
 ### 8.5. Paso 4: la academia
 
-`Academia/` se crea **clonando Code Academy con su historial**, sin tocar el original, y se adapta en su propio proyecto, con su forma de trabajar (hitos, tareas, pruebas). Lo que tendrá que añadir:
+`Academia/` se crea **clonando Code Academy con su historial**, sin tocar el original, y se adapta en su propio proyecto, con su forma de trabajar (hitos, tareas, pruebas).
 
-- Varios cursos a la vez, con el **curso inicial como requisito común** y **requisitos entre cursos** (por ejemplo, IA con Java pide saber Java).
-- **Enlaces entre cursos** y los **datos de cada módulo**, según el contrato de formato.
-- **Cursos por partes**, cada una con su página y su certificado.
-- Si se quieren: **prueba de nivel** por fase del curso inicial, **corrección automática** de ejercicios y **tiempos**.
-- Su `PLAN.md` dice hoy que la fuente del curso es una ruta absoluta al curso original: pasará a ser la relativa `../Cursos/curso-java/`.
-- **Antes de publicar:** la marca nueva.
+#### Lo que Code Academy ya tiene (visto el 8 de noviembre de 2026)
+
+Hitos H1 a H5 cerrados e integrados en `main`; H6 (uso real por el propietario) y H7 (publicación) pendientes. Su propio plan ya coincide con este en lo esencial: varios usuarios desde la primera versión local, objetivo de portfolio, publicación en internet como hito aparte, «una sola plataforma con estructura de cursos reutilizable» y «evitar bloquear lecciones por orden».
+
+- **Tecnologías:** React, Vite y TypeScript; Java 25 y Spring Boot 4.1.2 con Maven Wrapper; PostgreSQL 18.6 en Docker Compose; JPA, Flyway y Spring Security. Pruebas con Vitest, JUnit con Testcontainers y Playwright (recorrido completo con dos usuarios).
+- **Cuentas:** registro e inicio de sesión, contraseñas con Argon2id, CSRF, sesiones con caducidad; cookie preparada para HTTPS. Recuperación de contraseña por consola. **Sin administrador.**
+- **Seguimiento:** estados manuales de lección (completada o no), de ejercicio (pendiente, en curso o resuelto) y de etapa del proyecto; avance con porcentaje; «Continuar» en la última lección; catálogo y «Mis cursos».
+- **Contenido:** el curso de Java entero importado (199 lecciones y 14 etapas), Mermaid, código resaltado, soluciones desplegables, descarga de carpetas en ZIP, HTML saneado. Importador y actualización comparada (apartado 8.1).
+- **Interfaz:** modo claro y oscuro (sigue al sistema), diseño adaptable a tableta y móvil, estilos de impresión.
+- **Aspecto centralizado:** `frontend/src/styles/tokens.css` es el único fichero con colores, fuentes, tamaños y espaciados (unas 186 variables). El CSS de los componentes solo usa `var(--…)`, y un test (`src/styles.test.ts`) lo hace cumplir: falla si hay valores escritos directamente, variables sin definir o un tema oscuro que no redefine todos los colores del claro. Cambiar el aspecto es editar un solo fichero.
+- **Configuración** privada en `.env`, fuera de Git. Todo escucha solo en `127.0.0.1`.
+
+#### Lo que hay que añadir
+
+**Norma que se mantiene:** todo el aspecto visual sale de las variables de `tokens.css`, y toda pantalla nueva (administración, roadmaps, retos…) las usa. El test que lo comprueba no se desactiva.
+
+**Para el pack base 1.0:**
+
+- **Nombre y logo en un solo sitio**, igual que los colores. Hoy «Code Academy» está escrito en `index.html` (título de la pestaña), `src/layout/Layouts.tsx` (cabecera) y una prueba (`e2e/stages.spec.ts`). Así la marca se cambia sin tocar componentes, y encaja con el ajuste «nombre de la instancia» del panel de administración.
+
+- **Varios cursos a la vez**, con el curso inicial como recomendado y **recomendaciones entre cursos**, y **enlaces entre cursos**, **datos de cada módulo** y **retos** como extra opcional sin seguimiento, según el contrato. Ningún curso escrito en el código: el catálogo, las recomendaciones y los roadmaps salen del contenido instalado.
+- **Cursos como DLC**:
+  - La carpeta `content/` sale de Git y se rellena al instalar cada curso con el importador, desde una ruta local (`../Cursos/curso-xxx/`) y una versión concreta.
+  - Un fichero pequeño en el repositorio dice **qué cursos y qué versión** hay instalados, para poder reproducir la instalación.
+  - Un **curso de ejemplo pequeño** dentro del repositorio para las pruebas (hoy algunas usan el curso de Java real), la demo y las capturas del README.
+- **Roles de administrador y usuario.** El administrador se crea con un comando de consola al instalar (nunca con usuario y contraseña por defecto).
+- **Configuración en tres niveles:**
+
+  | Nivel | Qué se configura | Dónde |
+  |---|---|---|
+  | **Sistema** | Puerto, base de datos, dirección pública, HTTPS, claves | Variables de entorno (`.env`), al instalar o desplegar; no se toca desde la web |
+  | **Academia** (administrador) | Registro abierto, por invitación o cerrado; usuarios (listar, desactivar, restablecer contraseña); cursos instalados y su versión; nombre de la instancia | Panel de administración, guardado en la base de datos |
+  | **Usuario** | Tema claro u oscuro (ya existe); cambiar contraseña | Su perfil |
+
+- **Tres niveles de uso con la misma aplicación:**
+
+  | Nivel | Cómo se usa | Qué hace falta |
+  |---|---|---|
+  | **1. Local** | En tu máquina | Arrancar con **un solo comando** (hoy son tres terminales) |
+  | **2. Red local** | Desde otros dispositivos de casa | Escuchar en la red y no solo en `127.0.0.1`, abrir el puerto, documentar la IP fija o el nombre `.local` y avisar de que sin HTTPS las contraseñas viajan sin cifrar por la red de casa |
+  | **3. Internet** (futuro, hito H7) | En un servidor | Dominio, HTTPS, copias de seguridad, limitar intentos de acceso, CSP y los pendientes de seguridad que Code Academy ya tiene anotados para H7 |
+
+  Todo lo que cambia entre niveles va en variables de entorno; nada de `localhost` escrito en el código.
+- **Botón «Mejorar esta lección»** que lleva al fichero del curso en GitHub (cada lección sabe de qué repositorio y fichero sale).
+- **README para el portfolio**: presentación con la metáfora del juego y los DLC, «todo gratis y de código abierto» desde la primera línea, capturas o GIF, diagrama de la arquitectura, instalación con un comando y hoja de ruta pública.
+
+**Después del 1.0** (mejoras pendientes, sin orden fijo):
+
+- Roadmaps visuales, donde se marcan los pasos hechos, y avance por roadmap.
+- Versiones con equivalencias: trasladar el progreso en cambios de estructura, retirar módulos y avisar al usuario de que un módulo hecho ha cambiado.
+- Instalar cursos desde GitHub (dirección del repositorio y versión) y desde el panel de administración.
+- Guía «Crea tu propio curso» dentro de la academia, con el curso de ejemplo como plantilla de GitHub.
+- Destacar en la tarjeta de cada curso su **duración** (suma de los tiempos de los módulos) y mostrar los cursos **«Próximamente»**.
+- Preguntas de repaso como test interactivo.
+- Búsqueda, notas o marcadores por lección, tamaño de letra, atajos de teclado, retomar en la sección exacta (algunas ya anotadas en el plan de Code Academy).
+- Enlazar el repositorio del usuario a cada etapa del proyecto.
+- Corrección automática de ejercicios.
+- Estadísticas de uso, copias de seguridad desde el panel, invitaciones, borrar la cuenta y exportar los datos.
+- Comunidad: como mucho un enlace a GitHub Discussions.
+- **Para el nivel 3 (internet):** leer sin cuenta, perfil público con el progreso, demo pública y política de privacidad si hay registros reales.
+
+**Fuera:** certificados (al menos al principio), pagos, mentorías.
+
+**Antes del hito H6:** el autor usa la academia para estudiar y anota lo que encuentra. Lo que salga de ahí tiene prioridad sobre las funciones nuevas.
+
+### 8.6. Antes de publicar en GitHub
+
+Se hace en cada repositorio antes de su primer `push`, y la academia y el curso de Java con más cuidado, porque se copian **con su historial** y todo él queda público:
+
+- Revisar el **historial completo** con `gitleaks` (claves, `.env`, datos personales).
+- Quitar rutas absolutas (el `PLAN.md` de Code Academy tiene una `/home/...`) y poner al día lo desactualizado (su README dice que H4 está pendiente de integrar).
+- Licencia, `README.md`, `CONTRIBUTING.md` y `CHANGELOG.md`.
+- Revisar las licencias de las dependencias (Code Academy ya anotó elkjs, EPL-2.0, y dompurify, MPL-2.0 o Apache-2.0).
+- El nombre definitivo de la academia decidido (decisión 21).
+- Versión etiquetada y *release* con una nota corta de qué trae.
 
 ## 9. Estimaciones
 
@@ -415,36 +547,48 @@ Con el **ritmo real del curso de Java** (historial de Git): 199 módulos en 15 d
 
 | Trabajo | Estimación |
 |---|---|
-| Contrato de formato | 1 sesión |
-| Kit de herramientas | 1-2 días |
-| Curso inicial (31 módulos, unos 19 adaptados) | 2-3 días |
+| Contrato de formato | 1-2 sesiones |
+| Kit mínimo | 1-2 días |
+| Curso inicial (31 módulos, unos 19 adaptados, más retos de fase) | 3-4 días |
+| Academia para el pack base 1.0 | Por estimar en su propio proyecto; es lo más incierto |
 | Curso de Java | 2-3 días |
-| **Total hasta tener inicial y Java** | **alrededor de una semana de trabajo** |
 
-Más la revisión del autor al final de cada fase. La academia va aparte, con su propio ritmo. Lo más incierto: las ~70 menciones en el texto del curso de Java.
+Más la revisión del autor al final de cada fase. Los ritmos del curso de Java valen para adaptar; los módulos nuevos, las unas 70 menciones del curso de Java y las revisiones van más despacio.
 
 ## 10. Decisiones pendientes del autor
 
-**En el contrato de formato (paso 0):**
+**En el paso 0 (contrato de formato):**
 
 1. Cómo se enlaza entre cursos.
 2. Qué datos lleva cada módulo para la academia y dónde.
 3. Dónde van los tests de los ejercicios, aunque se usen más adelante.
+4. Dónde y en qué formato van los roadmaps y el glosario.
+5. **Lenguaje de los ejercicios del curso inicial:** solo pseudocódigo, o un lenguaje real (por ejemplo, Python: 3-4 módulos más). Con Python, quien siga con Python tiene ventaja; la pega es que el alumno de Java aprende antes otro lenguaje. **Gana peso con los retos**: sin lenguaje, los retos del inicial solo pueden ser de lógica, pseudocódigo o herramientas (Git, Markdown, JSON, terminal).
+6. **Nombre de la academia**, antes del primer `push` (decisión 21).
+7. **Licencias.** Propuesta: MIT para la academia, el kit y el código de los cursos; CC BY-SA para el texto de los cursos.
 
 **Del curso inicial:**
 
-4. **Nombre público** (propuestas: «Fundamentos para programar», «Curso de iniciación»). «Kit» queda solo para las herramientas internas.
-5. **Lenguaje de los ejercicios:** solo pseudocódigo, o un lenguaje real (por ejemplo, Python: 3-4 módulos más). Con Python, quien siga con Python tiene ventaja; la pega es que el alumno de Java aprende antes otro lenguaje.
-6. **Terminal en Windows:** bash para todos con Git Bash o WSL (recomendado) o también PowerShell. Mirar antes cómo lo resuelve el módulo 01.04 del curso de Java original.
-7. **Normas de la academia sobre el uso de la IA** en ejercicios y proyectos.
+8. **Nombre público** (propuestas: «Fundamentos para programar», «Curso de iniciación»). «Kit» queda solo para las herramientas.
+9. **Terminal en Windows:** bash para todos con Git Bash o WSL (recomendado) o también PowerShell. Mirar antes cómo lo resuelve el módulo 01.04 del curso de Java original.
+10. **Normas de la academia sobre el uso de la IA** en ejercicios y proyectos.
 
-**De la academia:**
+**De la academia y la publicación:**
 
-8. **Marca** nueva, antes de publicar: comprobar dominio, redes y registro de marcas (OEPM, EUIPO).
-9. Qué ve un alumno que compra solo una parte y encuentra referencias a otras.
+11. **Idioma de los README** para el portfolio: español, inglés o los dos.
+12. Si el contenido importado se queda fuera de Git (propuesto, apartado 8.5) o hay alguna razón para mantener una copia.
 
-**Más adelante, con datos de la academia:**
+**Más adelante:**
 
-10. El puesto 10 del orden (frontend, Kotlin, arquitectura, ramas de Python, DevOps).
-11. Kotlin «para desarrolladores Java» o «desde cero».
-12. Requisito exacto del curso de IA con Java.
+13. El puesto 11 del orden (frontend, Kotlin, arquitectura, ramas de Python, DevOps), según el interés del autor.
+14. Kotlin «para desarrolladores Java» o «desde cero».
+15. Qué conviene saber antes del curso de IA con Java.
+16. Si se abren los cursos a otras personas (con `FORMATO.md`, la plantilla y el comprobador) y cómo se revisan sus contribuciones.
+
+**Mejoras pendientes de los cursos** (se deciden al escribir el contrato o más adelante):
+
+- Recursos adicionales externos en cada módulo, fechados.
+- Código de partida para los ejercicios (irá con la corrección automática).
+- Dificultad de cada ejercicio (los cursos ya usan cuatro niveles: básico, intermedio, avanzado y caso real; falta decidir si la academia los muestra).
+- Accesibilidad del contenido: texto alternativo en las imágenes y descripción en texto de los diagramas.
+- Guía de estilo común (tono, tuteo, nombres, fechas): comprobar si basta con `Cursos/CLAUDE.md` y el curso de Java.
