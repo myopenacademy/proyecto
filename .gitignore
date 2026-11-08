@@ -1,0 +1,10 @@
+# Cada proyecto de dentro tiene su propio repositorio de Git:
+# este solo guarda la planificación común.
+/Academia/
+/Cursos/*/
+
+# Ficheros locales de cada máquina
+.env
+.env.*
+!.env.example
+.verificacion/
