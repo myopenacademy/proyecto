@@ -369,7 +369,7 @@ Los puestos 6 a 12 son orientativos, igual que los nombres de las carpetas de lo
 
 ### 8.1. Paso 0: el contrato de formato
 
-> **Hecho el 8 de noviembre de 2026.** El resultado es [`FORMATO.md`](FORMATO.md) (versión 1 del formato), que vive en esta carpeta hasta que exista `Cursos/kit-cursos/`. Lo que sigue es cómo se planteó.
+> **Hecho el 8 de noviembre de 2026.** El resultado es `Cursos/kit-cursos/FORMATO.md` (versión 1 del formato), en el repositorio del kit. Lo que sigue es cómo se planteó.
 
 Una o dos sesiones en esta carpeta, con acceso de solo lectura a `../Curso Java Completo/` y `../Code Academy/`, para escribir el **`FORMATO.md`** que cumplirán todos los cursos y que la academia sabrá instalar.
 
@@ -559,7 +559,7 @@ Más la revisión del autor al final de cada fase. Los ritmos del curso de Java 
 
 ## 10. Decisiones pendientes del autor
 
-**Resueltas en el paso 0** (8 de noviembre de 2026; detalle y porqué en [`ESTADO.md`](ESTADO.md) y el contrato en [`FORMATO.md`](FORMATO.md)):
+**Resueltas en el paso 0** (8 de noviembre de 2026; detalle y porqué en [`ESTADO.md`](ESTADO.md) y el contrato en `Cursos/kit-cursos/FORMATO.md`):
 
 1. ~~Cómo se enlaza entre cursos~~ → con la dirección completa de GitHub (`https://github.com/myopenacademy/<curso>/blob/main/…`).
 2. ~~Qué datos lleva cada módulo y dónde~~ → en la cabecera del módulo («Conviene saber antes», tiempo y nivel); la identidad y la parte, en `curso.json`.

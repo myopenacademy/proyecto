@@ -4,16 +4,20 @@
 
 ## Dónde estamos
 
-**8 de noviembre de 2026:** planificación revisada y **paso 0 terminado**: el contrato de formato está en [`FORMATO.md`](FORMATO.md) (versión 1), en esta carpeta hasta que exista `Cursos/kit-cursos/`. La academia se llama **MyOpenAcademy**. Existe la organización `myopenacademy` en GitHub (vacía). Ningún proyecto creado todavía en `Academia/` ni en `Cursos/`.
+**8 de noviembre de 2026:** planificación revisada y **paso 0 terminado**: el contrato de formato es `Cursos/kit-cursos/FORMATO.md` (versión 1). La academia se llama **MyOpenAcademy**. Existe la organización `myopenacademy` en GitHub (vacía). **Paso 1 en marcha:** creados `Cursos/kit-cursos/` y `Cursos/curso-inicial/`, cada uno con su repositorio, `CLAUDE.md`, plan y `ESTADO.md`, para trabajarlos en paralelo en dos sesiones. `Academia/` sigue vacía.
 
 ## Siguiente paso
 
-**Paso 1 del plan: el kit mínimo y la fase 1 del curso inicial** ([`PLAN.md`, apartados 7 y 8.2](PLAN.md#82-paso-1-el-kit-de-herramientas)). Meta final: el **pack base 1.0** (la academia más el DLC del curso inicial) publicado en GitHub; el curso de Java, como primer DLC.
+**Paso 1 del plan: el kit mínimo y la fase 1 del curso inicial** ([`PLAN.md`, apartados 7 y 8.2](PLAN.md#82-paso-1-el-kit-de-herramientas)), **en dos sesiones a la vez**. Meta final: el **pack base 1.0** (la academia más el DLC del curso inicial) publicado en GitHub; el curso de Java, como primer DLC.
 
-1. **Desde una sesión en esta carpeta:** crear `Cursos/kit-cursos/` con su repositorio de Git, su `CLAUDE.md`, su plan y su `ESTADO.md`, y mover allí `FORMATO.md`. Después, cerrar la sesión y abrir otra dentro de `Cursos/kit-cursos/`.
-2. **En el kit:** sacar del curso de Java original (solo comandos de Git de lectura) lo genérico de `herramientas/`, las plantillas (incluidos `curso.json`, `retos.md`, `LICENSE`, `CONTRIBUTING.md` y `CHANGELOG.md`) y escribir `formato_academia.py`, que comprueba `FORMATO.md`. Lo justo para el curso inicial.
-3. **Desde una sesión en esta carpeta:** crear `Cursos/curso-inicial/` con su repositorio y sus ficheros; después, sesión dentro de él para cerrar con el autor el temario (31 módulos, con sus identificadores y retos de fase), escribir la fase 1 y parar para que la revise.
-4. **Prueba de importación** de esa fase 1 en una copia de la academia (paso 2 del orden de trabajo).
+| Sesión abierta en | Qué hace | Dónde sigue |
+|---|---|---|
+| `Cursos/kit-cursos/` | Plantillas, `formato_academia.py` y las herramientas del curso de Java que necesita el curso inicial | Su `ESTADO.md` y `PLAN.md` |
+| `Cursos/curso-inicial/` | Decisiones del curso, temario con identificadores y `curso.json`, y la fase 1 | Su `ESTADO.md` y `PLAN-CURSO.md` |
+
+Reglas para que no se pisen: `FORMATO.md` solo se cambia desde el kit; el curso lo lee en `../kit-cursos/FORMATO.md` y anota en su `ESTADO.md` lo que no encaje, para que el autor lo lleve al kit; ninguna sesión toca el repositorio de la otra.
+
+Después: **prueba de importación** de la fase 1 en una copia de la academia (crear `Academia/` clonando Code Academy con su historial, desde una sesión en esta carpeta).
 
 ## Decisiones del paso 0
 
@@ -40,6 +44,7 @@ Todas del 8 de noviembre de 2026, aprobadas por el autor. El contrato completo e
 | 2026-11-08 | Planificación con el autor: catálogo, curso inicial, curso de Java nuevo (opción A), academia, estructura de carpetas y orden de trabajo. Resultado en `PLAN.md`. |
 | 2026-11-08 | Revisión del plan con el autor. Proyecto libre, gratuito y de código abierto, de uso propio y para portfolio; academia como «juego» y cursos como «DLC» que se instalan con su versión; acceso libre con recomendaciones y roadmaps; varios usuarios con roles y configuración; diseñada para internet aunque se use en local; los cursos se hacen para la academia; versiones de cursos; retos opcionales al final de cada fase; pack base 1.0 primero; trabajo en paralelo según la gente disponible. Se revisó Code Academy (hitos H1 a H5 hechos) y otras academias (The Odin Project, Exercism, freeCodeCamp, roadmap.sh, Full Stack Open, MoureDev, midudev, Píldoras Informáticas) en busca de ideas. Resultado en `PLAN.md` y `Cursos/CLAUDE.md`. |
 | 2026-11-08 | **Paso 0: contrato de formato.** Estudiados, solo leyendo, la estructura del curso de Java original y el manifiesto, el importador y la actualización de Code Academy. Escrito `FORMATO.md` (versión 1) y resueltas con el autor las decisiones 1 a 7 del apartado 10 del plan (ver «Decisiones del paso 0»). |
+| 2026-11-08 | **Paso 1 empezado:** creados `Cursos/kit-cursos/` (con `FORMATO.md` movido desde la raíz) y `Cursos/curso-inicial/` (con su plan y el temario de 31 módulos con la ruta de origen de cada módulo adaptado), cada uno con su repositorio, `CLAUDE.md`, plan, `ESTADO.md`, `README.md` y `.gitignore`. |
 
 ## Ajustes pedidos por el autor
 
