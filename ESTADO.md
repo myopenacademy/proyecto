@@ -4,7 +4,7 @@
 
 ## Dónde estamos
 
-**8 de noviembre de 2026:** planificación revisada y **paso 0 terminado**: el contrato de formato es `Cursos/kit-cursos/FORMATO.md` (versión 1). La academia se llama **MyOpenAcademy**. Existe la organización `myopenacademy` en GitHub (vacía). **Paso 1 en marcha:** creados `Cursos/kit-cursos/` y `Cursos/curso-inicial/`, cada uno con su repositorio, `CLAUDE.md`, plan y `ESTADO.md`, para trabajarlos en paralelo en dos sesiones. `Academia/` sigue vacía.
+**8 de noviembre de 2026:** planificación revisada y **paso 0 terminado**: el contrato de formato es `Cursos/kit-cursos/FORMATO.md` (versión 1). La academia se llama **MyOpenAcademy**. Existe la organización `myopenacademy` en GitHub (vacía). **Paso 1 en marcha:** creados `Cursos/kit-cursos/` y `Cursos/curso-inicial/`, cada uno con su repositorio, `CLAUDE.md`, plan y `ESTADO.md`, para trabajarlos en paralelo en dos sesiones. **Fase 1 del curso inicial aprobada por el autor.** **`Academia/` creada** clonando Code Academy con su historial, para la prueba de importación (paso 2).
 
 ## Siguiente paso
 
@@ -17,7 +17,13 @@
 
 Reglas para que no se pisen: `FORMATO.md` solo se cambia desde el kit; el curso lo lee en `../kit-cursos/FORMATO.md` y anota en su `ESTADO.md` lo que no encaje, para que el autor lo lleve al kit; ninguna sesión toca el repositorio de la otra.
 
-Después: **prueba de importación** de la fase 1 en una copia de la academia (crear `Academia/` clonando Code Academy con su historial, desde una sesión en esta carpeta).
+Y una tercera sesión, ya creada su carpeta:
+
+| Sesión abierta en | Qué hace | Dónde sigue |
+|---|---|---|
+| `Academia/` | **Prueba de importación** de la fase 1 del curso inicial, lista de cambios del importador y nuevo plan de la academia hasta el pack base 1.0 | Su `ESTADO.md` |
+
+⚠️ Su `compose.yaml` heredado se llama `code-academy`: antes de arrancar nada hay que renombrarlo para no usar los contenedores ni los datos del Code Academy original (está en su `CLAUDE.md`).
 
 ## Decisiones del paso 0
 
@@ -52,6 +58,7 @@ Tomadas el 8 de noviembre de 2026 en la sesión del curso inicial y anotadas aqu
 | 2026-11-08 | Planificación con el autor: catálogo, curso inicial, curso de Java nuevo (opción A), academia, estructura de carpetas y orden de trabajo. Resultado en `PLAN.md`. |
 | 2026-11-08 | Revisión del plan con el autor. Proyecto libre, gratuito y de código abierto, de uso propio y para portfolio; academia como «juego» y cursos como «DLC» que se instalan con su versión; acceso libre con recomendaciones y roadmaps; varios usuarios con roles y configuración; diseñada para internet aunque se use en local; los cursos se hacen para la academia; versiones de cursos; retos opcionales al final de cada fase; pack base 1.0 primero; trabajo en paralelo según la gente disponible. Se revisó Code Academy (hitos H1 a H5 hechos) y otras academias (The Odin Project, Exercism, freeCodeCamp, roadmap.sh, Full Stack Open, MoureDev, midudev, Píldoras Informáticas) en busca de ideas. Resultado en `PLAN.md` y `Cursos/CLAUDE.md`. |
 | 2026-11-08 | **Paso 0: contrato de formato.** Estudiados, solo leyendo, la estructura del curso de Java original y el manifiesto, el importador y la actualización de Code Academy. Escrito `FORMATO.md` (versión 1) y resueltas con el autor las decisiones 1 a 7 del apartado 10 del plan (ver «Decisiones del paso 0»). |
+| 2026-11-08 | **Fase 1 del curso inicial aprobada por el autor** tras la revisión de conjunto, los recortes y una segunda opinión completa. Creada `Academia/` clonando Code Academy con su historial (sin remoto), con su `CLAUDE.md` y su `ESTADO.md`, para la prueba de importación. |
 | 2026-11-08 | Anotadas en la raíz las decisiones 8 a 10 del curso inicial (nombre público, bash para todos, normas sobre la IA). |
 | 2026-11-08 | **Paso 1 empezado:** creados `Cursos/kit-cursos/` (con `FORMATO.md` movido desde la raíz) y `Cursos/curso-inicial/` (con su plan y el temario de 31 módulos con la ruta de origen de cada módulo adaptado), cada uno con su repositorio, `CLAUDE.md`, plan, `ESTADO.md`, `README.md` y `.gitignore`. |
 
