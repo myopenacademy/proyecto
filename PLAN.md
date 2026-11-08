@@ -39,7 +39,7 @@ El curso de Java original y Code Academy fueron el aprendizaje; este proyecto es
 
 **Producto**
 
-7. **Libre, gratuito y de código abierto**: la academia y los cursos. Licencias por decidir (apartado 10).
+7. **Libre, gratuito y de código abierto**: la academia y los cursos. Licencias: **MIT** para la academia, el kit y el código de los cursos; **CC BY-SA 4.0** para el texto de los cursos (decidido en el paso 0).
 8. **Acceso libre**: cualquier usuario puede estudiar el curso y el módulo que quiera. Los requisitos entre cursos y módulos son **recomendaciones**, nunca bloqueos.
 9. **Roadmaps opcionales**: rutas de aprendizaje dentro de un curso y entre cursos (por ejemplo, «Backend con Java: inicial → Java → SQL → Git a fondo → DevOps»). Se definen como datos, no como código.
 10. **Varios usuarios con cuentas** y seguimiento propio (por módulo, curso, parte y roadmap), con **roles de administrador y usuario** (apartado 8.5).
@@ -56,7 +56,7 @@ El curso de Java original y Code Academy fueron el aprendizaje; este proyecto es
 18. **Se trabaja en paralelo lo que haga falta, según la gente disponible.** Cada proyecto (academia, kit o curso) lo lleva una sola sesión o persona a la vez. Los cambios en el kit y en `FORMATO.md` se hacen solo desde el proyecto del kit, y los demás los recogen después. Cada curso pasa la revisión de su responsable antes de publicarse.
 19. **Pack base 1.0 primero**: **la academia más el DLC del curso inicial**, ya instalado, porque una academia sin cursos no sirve. El curso inicial es un DLC como los demás (su repositorio, su versión, el mismo instalador); solo viene de serie. Así el sistema de DLC queda probado desde el primer día. El curso de Java es el primer DLC que se publica aparte; después, el resto (apartado 7).
 20. **Se publica en GitHub según se avanza**, con versiones y *releases*, registro de cambios y una hoja de ruta pública en el README de la academia.
-21. **La marca «Code Academy» se cambia**: se confunde con Codecademy. No hace falta registrarla; basta con un nombre libre en GitHub (y, si se quiere, como dominio). Se decide **antes del primer `push`**, porque el nombre del repositorio es la marca. La carpeta se llama `Academia/` para que el nombre no afecte a ninguna ruta.
+21. **La academia se llama MyOpenAcademy** (decidido en el paso 0): sustituye a «Code Academy», que se confunde con Codecademy. No se registra la marca. La academia va en la cuenta del autor (`santi-cast/myopenacademy`, su portfolio) y los cursos y el kit en la organización `myopenacademy` de GitHub, cada uno con su propio repositorio. La carpeta se llama `Academia/` para que el nombre no afecte a ninguna ruta.
 22. **Presentación en el portfolio con la metáfora del juego y los DLC**, dejando claro desde la primera línea que todo es gratis. En la documentación técnica y el código se dice «curso» o «paquete de curso», no DLC.
 23. **Normas de trabajo**: el kit, lo justo; todo lo importante, escrito.
 
@@ -369,6 +369,8 @@ Los puestos 6 a 12 son orientativos, igual que los nombres de las carpetas de lo
 
 ### 8.1. Paso 0: el contrato de formato
 
+> **Hecho el 8 de noviembre de 2026.** El resultado es [`FORMATO.md`](FORMATO.md) (versión 1 del formato), que vive en esta carpeta hasta que exista `Cursos/kit-cursos/`. Lo que sigue es cómo se planteó.
+
 Una o dos sesiones en esta carpeta, con acceso de solo lectura a `../Curso Java Completo/` y `../Code Academy/`, para escribir el **`FORMATO.md`** que cumplirán todos los cursos y que la academia sabrá instalar.
 
 - **Manda la academia**: el contrato recoge lo que la academia necesita para importar y mostrar un curso. El curso de Java original sigue siendo el modelo de estructura, porque Code Academy se hizo a su medida.
@@ -557,15 +559,17 @@ Más la revisión del autor al final de cada fase. Los ritmos del curso de Java 
 
 ## 10. Decisiones pendientes del autor
 
-**En el paso 0 (contrato de formato):**
+**Resueltas en el paso 0** (8 de noviembre de 2026; detalle y porqué en [`ESTADO.md`](ESTADO.md) y el contrato en [`FORMATO.md`](FORMATO.md)):
 
-1. Cómo se enlaza entre cursos.
-2. Qué datos lleva cada módulo para la academia y dónde.
-3. Dónde van los tests de los ejercicios, aunque se usen más adelante.
-4. Dónde y en qué formato van los roadmaps y el glosario.
-5. **Lenguaje de los ejercicios del curso inicial:** solo pseudocódigo, o un lenguaje real (por ejemplo, Python: 3-4 módulos más). Con Python, quien siga con Python tiene ventaja; la pega es que el alumno de Java aprende antes otro lenguaje. **Gana peso con los retos**: sin lenguaje, los retos del inicial solo pueden ser de lógica, pseudocódigo o herramientas (Git, Markdown, JSON, terminal).
-6. **Nombre de la academia**, antes del primer `push` (decisión 21).
-7. **Licencias.** Propuesta: MIT para la academia, el kit y el código de los cursos; CC BY-SA para el texto de los cursos.
+1. ~~Cómo se enlaza entre cursos~~ → con la dirección completa de GitHub (`https://github.com/myopenacademy/<curso>/blob/main/…`).
+2. ~~Qué datos lleva cada módulo y dónde~~ → en la cabecera del módulo («Conviene saber antes», tiempo y nivel); la identidad y la parte, en `curso.json`.
+3. ~~Dónde van los tests de los ejercicios~~ → nombres reservados `partida/` y `pruebas/` junto a cada solución.
+4. ~~Roadmaps y glosario~~ → roadmaps entre cursos como datos en la academia; glosario en `glosario.md` del curso inicial.
+5. ~~Lenguaje del curso inicial~~ → pseudocódigo; retos de herramientas (Git, Markdown, JSON, YAML, terminal). PSeInt, como idea para más adelante.
+6. ~~Nombre de la academia~~ → MyOpenAcademy (decisión 21).
+7. ~~Licencias~~ → MIT para el código y CC BY-SA 4.0 para el texto (decisión 7).
+
+Además se decidió que **la identidad de cada curso la guarda el propio curso** en `curso.json`, con identificadores sin números, y no la academia.
 
 **Del curso inicial:**
 
