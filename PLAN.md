@@ -553,10 +553,10 @@ Con el **ritmo real del curso de Java** (historial de Git): 199 módulos en 15 d
 | Contrato de formato | 1-2 sesiones |
 | Kit mínimo | 1-2 días |
 | Curso inicial (31 módulos, unos 19 adaptados, más retos de fase) | 3-4 días |
-| Academia para el pack base 1.0 | Por estimar en su propio proyecto; es lo más incierto |
+| Academia para el pack base 1.0 | Unos **20 días**, más las revisiones del autor (plan de la academia, 9 de noviembre de 2026): H7 cursos como DLC, unos 7; H8 contenido según el formato, unos 3,5; H9 cuentas y administración, unos 4; H10 instalación, unos 4,5; H11 pack base 1.0, unos 2. H6 (uso real) va en paralelo. Lo más incierto, el importador que lee `curso.json` (H7) |
 | Curso de Java | 2-3 días |
 
-Más la revisión del autor al final de cada fase. Los ritmos del curso de Java valen para adaptar; los módulos nuevos, las unas 70 menciones del curso de Java y las revisiones van más despacio.
+Más la revisión del autor al final de cada fase. **H11 (publicar el pack base 1.0) depende de que el curso inicial esté completo.** Mientras se construye la academia nueva, el autor estudia Java en el Code Academy original (sin arrancar las dos a la vez). Los ritmos del curso de Java valen para adaptar; los módulos nuevos, las unas 70 menciones del curso de Java y las revisiones van más despacio.
 
 ## 10. Decisiones pendientes del autor
 
