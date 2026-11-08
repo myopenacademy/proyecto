@@ -26,6 +26,21 @@ Hoy solo existe la planificación. Los proyectos se crean en el orden de [`PLAN.
 - **La academia importa cada curso** desde un commit fijo de `../Cursos/<curso>/` con su importador y guarda la copia en su carpeta de contenido. Nunca lee los cursos en directo.
 - **Cada `CLAUDE.md` añade lo suyo** a los de las carpetas superiores: una sesión abierta en `Cursos/curso-sql/` lee las reglas generales, las de cursos y las de SQL; una abierta en `Academia/` no carga las de cursos.
 
+## Dónde abrir cada sesión
+
+Cada proyecto se trabaja abriendo Claude Code en su carpeta:
+
+| Para… | Abre Claude Code en |
+|---|---|
+| Planificar en general, el orden, el contrato de formato o crear un proyecto nuevo | `Proyecto Academia/` |
+| Trabajar en el kit | `Cursos/kit-cursos/` |
+| Escribir un curso | `Cursos/curso-xxx/` |
+| Trabajar en la academia | `Academia/` |
+
+- Una sesión en un curso carga el `CLAUDE.md` de la raíz, el de `Cursos/` y el del curso; una sesión en `Academia/` carga el de la raíz y el suyo.
+- **Crear un proyecto nuevo** (crear su carpeta o clonar el original) se hace desde la sesión de la raíz. En cuanto existe con su `CLAUDE.md`, se cierra esa sesión y se abre otra dentro de la carpeta del proyecto.
+- **Al terminar algo importante** en un proyecto (por ejemplo, un curso publicado), se actualiza también el `ESTADO.md` de la raíz desde una sesión en `Proyecto Academia/`.
+
 ## Normas para que la carpeta se pueda copiar entera
 
 1. **Ninguna ruta absoluta** en scripts ni documentos (nada de `/home/...`). Todo es relativo al proyecto o a esta carpeta.
