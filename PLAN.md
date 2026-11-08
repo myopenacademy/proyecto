@@ -336,6 +336,7 @@ Del curso original sale una parte pequeña; el resto se queda. Adaptando se cons
 
 1. Crear `Cursos/curso-java/` **clonando el curso original con su historial**, sin tocar el original.
 2. Quitar lo que pasa al inicial y rehacer el arranque: el curso empieza por instalar el JDK y recomienda «haber hecho el curso inicial».
+   - **Terminal:** el curso original pone PowerShell y bash lado a lado (en el 01.04 y otros módulos). Como el curso inicial enseña **bash para todos** (Git Bash en Windows), se pasa a bash y se enlaza al inicial (decisión 9 del apartado 10).
 3. Recortar la parte general de los módulos de la tabla y enlazar al inicial (con el formato de enlace entre cursos del contrato, apartado 8.1).
 4. Donde se explica JSON, XML o YAML por primera vez (Maven, web, Spring, despliegue), resumir y enlazar al inicial.
 5. Revisar enlaces y menciones a lo quitado: medido el 8 de noviembre de 2026, **66 ficheros con 226 enlaces** a las fases 00 y 01 y **unas 70 menciones en el texto** («fase 0», «módulo 01.x»). Los enlaces los señala la comprobación de enlaces; las menciones hay que leerlas una a una (lo más incierto de la adaptación).
@@ -571,11 +572,11 @@ Más la revisión del autor al final de cada fase. Los ritmos del curso de Java 
 
 Además se decidió que **la identidad de cada curso la guarda el propio curso** en `curso.json`, con identificadores sin números, y no la academia.
 
-**Del curso inicial:**
+**Del curso inicial** (resueltas el 8 de noviembre de 2026 en su sesión; detalle en `Cursos/curso-inicial/PLAN-CURSO.md`, apartados 2 y 6):
 
-8. **Nombre público** (propuestas: «Fundamentos para programar», «Curso de iniciación»). «Kit» queda solo para las herramientas.
-9. **Terminal en Windows:** bash para todos con Git Bash o WSL (recomendado) o también PowerShell. Mirar antes cómo lo resuelve el módulo 01.04 del curso de Java original.
-10. **Normas de la academia sobre el uso de la IA** en ejercicios y proyectos.
+8. ~~Nombre público~~ → **«Fundamentos para programar»**.
+9. ~~Terminal en Windows~~ → **bash para todos**, con Git Bash en Windows (se instala con Git) y WSL como alternativa para cursos posteriores. Un solo juego de comandos, el mismo que en servidores, Docker y CI, y verificable. «La terminal: lo básico» lleva solo una tabla pequeña de equivalencias con PowerShell. **Afecta al curso de Java** (apartado 6.3).
+10. ~~Normas sobre el uso de la IA~~ → **cinco normas para toda la academia** (son recomendaciones, porque no hay corrección): 1) intenta cada ejercicio primero y usa la IA como profesor (que explique, dé pistas o revise), no para que lo haga; 2) comprueba siempre lo que te dé, con casos de prueba; 3) nunca pegues contraseñas, claves ni datos personales; 4) en los proyectos puedes usarla, pero tienes que entenderlo todo y contarlo en una sección «Cómo lo hice» del README; 5) las soluciones están plegadas: mira antes la tuya.
 
 **De la academia y la publicación:**
 

@@ -37,6 +37,14 @@ Todas del 8 de noviembre de 2026, aprobadas por el autor. El contrato completo e
   - El **README de la academia** enlaza a todo: cursos disponibles (DLC), «Crea tu propio curso» con el kit y `FORMATO.md`, hoja de ruta y diagrama. La organización tendrá su portada con enlace de vuelta.
   - Se descartó meter los cursos dentro del repositorio de la academia (repositorio enorme, versiones mezcladas, choca con «un repositorio por proyecto» y con la idea de DLC).
 
+## Decisiones del curso inicial que valen para todo el proyecto
+
+Tomadas el 8 de noviembre de 2026 en la sesión del curso inicial y anotadas aquí (`PLAN.md`, apartado 10, decisiones 8 a 10):
+
+- **Nombre público del curso inicial:** «Fundamentos para programar».
+- **Bash para todos**, con Git Bash en Windows y WSL como alternativa. **Afecta al curso de Java**: al adaptarlo, pasar de PowerShell y bash lado a lado a solo bash, enlazando al inicial (`PLAN.md`, apartado 6.3).
+- **Cinco normas sobre el uso de la IA para toda la academia** (`PLAN.md`, decisión 10).
+
 ## Hecho
 
 | Fecha | Qué |
@@ -44,6 +52,7 @@ Todas del 8 de noviembre de 2026, aprobadas por el autor. El contrato completo e
 | 2026-11-08 | Planificación con el autor: catálogo, curso inicial, curso de Java nuevo (opción A), academia, estructura de carpetas y orden de trabajo. Resultado en `PLAN.md`. |
 | 2026-11-08 | Revisión del plan con el autor. Proyecto libre, gratuito y de código abierto, de uso propio y para portfolio; academia como «juego» y cursos como «DLC» que se instalan con su versión; acceso libre con recomendaciones y roadmaps; varios usuarios con roles y configuración; diseñada para internet aunque se use en local; los cursos se hacen para la academia; versiones de cursos; retos opcionales al final de cada fase; pack base 1.0 primero; trabajo en paralelo según la gente disponible. Se revisó Code Academy (hitos H1 a H5 hechos) y otras academias (The Odin Project, Exercism, freeCodeCamp, roadmap.sh, Full Stack Open, MoureDev, midudev, Píldoras Informáticas) en busca de ideas. Resultado en `PLAN.md` y `Cursos/CLAUDE.md`. |
 | 2026-11-08 | **Paso 0: contrato de formato.** Estudiados, solo leyendo, la estructura del curso de Java original y el manifiesto, el importador y la actualización de Code Academy. Escrito `FORMATO.md` (versión 1) y resueltas con el autor las decisiones 1 a 7 del apartado 10 del plan (ver «Decisiones del paso 0»). |
+| 2026-11-08 | Anotadas en la raíz las decisiones 8 a 10 del curso inicial (nombre público, bash para todos, normas sobre la IA). |
 | 2026-11-08 | **Paso 1 empezado:** creados `Cursos/kit-cursos/` (con `FORMATO.md` movido desde la raíz) y `Cursos/curso-inicial/` (con su plan y el temario de 31 módulos con la ruta de origen de cada módulo adaptado), cada uno con su repositorio, `CLAUDE.md`, plan, `ESTADO.md`, `README.md` y `.gitignore`. |
 
 ## Ajustes pedidos por el autor
