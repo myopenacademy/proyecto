@@ -42,7 +42,7 @@ Todas del 8 de noviembre de 2026, aprobadas por el autor. El contrato completo e
 Tomadas el 8 de noviembre de 2026 en la sesión del curso inicial y anotadas aquí (`PLAN.md`, apartado 10, decisiones 8 a 10):
 
 - **Nombre público del curso inicial:** «Fundamentos para programar».
-- **Bash para todos**, con Git Bash en Windows y WSL como alternativa. **Afecta al curso de Java**: al adaptarlo, pasar de PowerShell y bash lado a lado a solo bash, enlazando al inicial (`PLAN.md`, apartado 6.3).
+- **Bash para todos**, con Git Bash en Windows y WSL como alternativa; **en macOS, solo lo que funciona en bash 3.2** (su versión), avisando de los comandos que cambian entre macOS y Linux. **Salidas en español** y **rama `main`** en Git. **Afecta al curso de Java**: al adaptarlo, pasar de PowerShell y bash lado a lado a solo bash, enlazando al inicial (`PLAN.md`, apartado 6.3).
 - **Cinco normas sobre el uso de la IA para toda la academia** (`PLAN.md`, decisión 10).
 
 ## Hecho
