@@ -68,6 +68,7 @@ Tomadas el 8 de noviembre de 2026 en la sesión del curso inicial y anotadas aqu
 - Los **retos** van dentro de cada curso, al final de cada fase: opcionales, sin seguimiento y sin bloquear.
 - **Se trabaja en paralelo lo que haga falta**: hoy el autor está solo, mañana puede haber más gente.
 - Ir publicando en GitHub para que se vea el progreso del proyecto.
+- **La sesión de la raíz aconseja cuándo cerrar cada sesión** (raíz, kit, curso, academia) para trabajar con contextos frescos: al terminar una unidad natural (fase aprobada, hito integrado, tramo del kit) o cuando la conversación ya es muy larga, siempre con todo guardado (commit, `ESTADO.md` al día, resumen en engram) y con la frase para abrir la sesión nueva.
 - Además de escribirlo aquí, **guardar las decisiones en engram** (el autor permitió `mem_save` y `mem_session_summary`; `mem_judge` sigue sin permiso).
 
 ## Pendientes del autor
