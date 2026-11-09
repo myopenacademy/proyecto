@@ -543,6 +543,7 @@ Se hace en cada repositorio antes de su primer `push`, y la academia y el curso 
 - Revisar las licencias de las dependencias (Code Academy ya anotó elkjs, EPL-2.0, y dompurify, MPL-2.0 o Apache-2.0).
 - El nombre definitivo de la academia decidido (decisión 21).
 - Versión etiquetada y *release* con una nota corta de qué trae.
+- **Riesgo conocido: macOS sin probar en una máquina real** (el autor no tiene Mac; anotado el 9 de noviembre de 2026). Docker solo verifica Linux, y en cada revisión salen diferencias de macOS (`--help` de las órdenes de BSD, mensajes de zsh, menús de VS Code). Mientras no haya un Mac, los cursos dicen en general lo que no pueden comprobar, y el `README.md` y el `CONTRIBUTING.md` de cada curso lo cuentan y piden avisos de quien lo pruebe en un Mac.
 
 ## 9. Estimaciones
 
