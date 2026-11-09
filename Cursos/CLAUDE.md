@@ -17,7 +17,7 @@ Mientras no exista `kit-cursos/`, la referencia de todo lo que se dice aquí es 
 - **Verifica versiones y APIs** contra la documentación oficial antes de escribir. Nunca inventes APIs.
 - **Compila y ejecuta todo el código** antes de incluirlo. Cada programa completo se guarda en `codigo/` de su fase, enlazado desde el módulo con «📁 Código», y la verificación del kit debe pasar antes de cada commit. Las pruebas sueltas que no se publican van en `.verificacion/`, fuera de Git.
 - **Nombres estables**: el temario y los nombres de fichero se cierran antes de escribir. La academia identifica cada lección por un identificador permanente; renombrar o mover un módulo es una excepción que se anota.
-- Verifica **el módulo** al terminarlo y **la fase entera** al cerrarla (o si cambia algo compartido). Al cerrar cada fase: verificación entera tras el último cambio, enlaces de todo el curso, Mermaid, y apuntarlo en `ESTADO.md`.
+- Verifica **el módulo** al terminarlo y **la fase entera** al cerrarla (o si cambia algo compartido). Al cerrar cada fase: verificación entera **del último commit, como la recibirá el alumno** (`verificar_codigo.py --commit`, con Docker), enlaces de todo el curso, Mermaid, y apuntarlo en `ESTADO.md` (decidido el 9 de noviembre de 2026: en el disco del autor pueden pasar cosas que fallan en un clon, como CRLF, carpetas vacías o permisos).
 - **Un commit por módulo**, y `ESTADO.md` al día al terminar cada uno.
 - **Después de cada módulo, actualiza toda la documentación** del curso: índice, chuleta global, enlaces, diagramas, `ESTADO.md`, la documentación de las herramientas que cambien, plan, portada, roadmaps, módulos anteriores y proyecto, si les afecta.
 - **Para al terminar cada fase** para que el autor la revise.
