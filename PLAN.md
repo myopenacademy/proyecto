@@ -492,7 +492,7 @@ Hitos H1 a H5 cerrados e integrados en `main`; H6 (uso real por el propietario) 
 - **Cursos como DLC**:
   - La carpeta `content/` sale de Git y se rellena al instalar cada curso con el importador, desde una ruta local (`../Cursos/curso-xxx/`) y una versión concreta.
   - Un fichero pequeño en el repositorio dice **qué cursos y qué versión** hay instalados, para poder reproducir la instalación.
-  - Un **curso de ejemplo pequeño** dentro del repositorio para las pruebas (hoy algunas usan el curso de Java real), la demo y las capturas del README.
+  - **Cursos de ejemplo pequeños** para las pruebas (hoy algunas usan el curso de Java real), la demo y las capturas del README. Viven **en el kit** (`bueno` y `ejemplo-destino`, que los comprueba; decidido el 9 de noviembre de 2026), y la academia guarda una copia sacada de un commit fijo del kit, que renueva cuando cambian.
 - **Roles de administrador y usuario.** El administrador se crea con un comando de consola al instalar (nunca con usuario y contraseña por defecto).
 - **Configuración en tres niveles:**
 
@@ -565,7 +565,7 @@ Más la revisión del autor al final de cada fase. **H11 (publicar el pack base 
 1. ~~Cómo se enlaza entre cursos~~ → con la dirección completa de GitHub (`https://github.com/myopenacademy/<curso>/blob/main/…`).
 2. ~~Qué datos lleva cada módulo y dónde~~ → en la cabecera del módulo («Conviene saber antes», tiempo y nivel); la identidad y la parte, en `curso.json`.
 3. ~~Dónde van los tests de los ejercicios~~ → nombres reservados `partida/` y `pruebas/` junto a cada solución.
-4. ~~Roadmaps y glosario~~ → roadmaps entre cursos como datos en la academia; glosario en `glosario.md` del curso inicial.
+4. ~~Roadmaps y glosario~~ → roadmaps entre cursos como datos en la academia; glosario común en `glosario.md` del curso inicial; desde el 9 de noviembre de 2026, cualquier curso puede tener además su propio glosario (`FORMATO.md`, apartado 9).
 5. ~~Lenguaje del curso inicial~~ → pseudocódigo; retos de herramientas (Git, Markdown, JSON, YAML, terminal). PSeInt, como idea para más adelante.
 6. ~~Nombre de la academia~~ → MyOpenAcademy (decisión 21).
 7. ~~Licencias~~ → MIT para el código y CC BY-SA 4.0 para el texto (decisión 7).
