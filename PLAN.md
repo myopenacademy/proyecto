@@ -544,6 +544,7 @@ Se hace en cada repositorio antes de su primer `push`, y la academia y el curso 
 - Revisar las licencias de las dependencias (Code Academy ya anotó elkjs, EPL-2.0, y dompurify, MPL-2.0 o Apache-2.0).
 - El nombre definitivo de la academia decidido (decisión 21).
 - Versión etiquetada y *release* con una nota corta de qué trae.
+- **Versiones de las herramientas al día** (Git, bash, VS Code, Mermaid, Unicode…) en los cursos y en la terminal del kit, con fecha. Regla aprobada por el autor el 16 de noviembre de 2026: se revisan **antes de publicar** y cuando cambia la **versión menor** (de la 2.56 a la 2.57), **no por cada parche** (2.56.1): un parche no cambia las salidas y obligaría a reconstruir la terminal del kit y volver a verificar cada pocas semanas. El texto dice qué versión da las salidas y cuál es la más reciente, con fecha («Git 2.56; salidas de la 2.56.0; la más reciente, la 2.56.1»).
 - **Riesgo conocido: macOS sin probar en una máquina real** (el autor no tiene Mac; anotado el 9 de noviembre de 2026). Docker solo verifica Linux, y en cada revisión salen diferencias de macOS (`--help` de las órdenes de BSD, mensajes de zsh, menús de VS Code). Mientras no haya un Mac, los cursos dicen en general lo que no pueden comprobar, y el `README.md` y el `CONTRIBUTING.md` de cada curso lo cuentan y piden avisos de quien lo pruebe en un Mac.
 
 ## 9. Estimaciones
