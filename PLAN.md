@@ -584,7 +584,7 @@ Además se decidió que **la identidad de cada curso la guarda el propio curso**
 
 **De la academia y la publicación:**
 
-11. **Idioma de los README** para el portfolio: español, inglés o los dos.
+11. ~~**Idioma de los README** para el portfolio~~ → **español, con un párrafo corto en inglés al principio** (decidido por el autor el 16 de noviembre de 2026, para el README de la academia).
 12. Si el contenido importado se queda fuera de Git (propuesto, apartado 8.5) o hay alguna razón para mantener una copia.
 
 **Más adelante:**
