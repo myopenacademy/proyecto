@@ -538,7 +538,8 @@ Hitos H1 a H5 cerrados e integrados en `main`; H6 (uso real por el propietario) 
 Se hace en cada repositorio antes de su primer `push`, y la academia y el curso de Java con más cuidado, porque se copian **con su historial** y todo él queda público:
 
 - Revisar el **historial completo** con `gitleaks` (claves, `.env`, datos personales).
-- **Decisión del autor para la academia, antes de su primer `push`:** su historial, clonado de Code Academy, sigue llevando el curso de Java entero (`content/java`, unos 22.900 ficheros) aunque desde T3 ya no esté en Git (9 de noviembre de 2026). Publicado tal cual, el repositorio pesa mucho y el texto de Java sale ahí antes que en su propio repositorio. Reescribir el historial para quitarlo es barato mientras no haya remoto y caro después.
+- **Historial de la academia sin el curso de Java:** su historial, clonado de Code Academy, sigue llevando el curso de Java entero (`content/java`, unos 22.900 ficheros) aunque desde T3 ya no esté en Git (9 de noviembre de 2026). Publicado tal cual, el repositorio pesa mucho y el texto de Java sale ahí antes que en su propio repositorio. **Decidido por el autor (16 de noviembre de 2026): se reescribe el historial para quitarlo antes del primer `push`, en H11, con una copia del repositorio guardada antes.**
+- **Etiquetas de los cursos** (decidido por el autor el 16 de noviembre de 2026): un curso no se etiqueta hasta que está completo y aprobado; el curso inicial, `v1.0.0` para el pack base 1.0. Mientras tanto, la academia lo instala desde un commit.
 - Quitar rutas absolutas (el `PLAN.md` de Code Academy tiene una `/home/...`) y poner al día lo desactualizado (su README dice que H4 está pendiente de integrar).
 - Licencia, `README.md`, `CONTRIBUTING.md` y `CHANGELOG.md`.
 - Revisar las licencias de las dependencias (Code Academy ya anotó elkjs, EPL-2.0, y dompurify, MPL-2.0 o Apache-2.0).
