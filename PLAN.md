@@ -334,7 +334,7 @@ Del curso original sale una parte pequeña; el resto se queda. Adaptando se cons
 
 ### 6.3. Cómo
 
-1. Crear `Cursos/curso-java/` **clonando el curso original con su historial**, sin tocar el original.
+1. Crear `Cursos/curso-java/` **clonando el curso original con su historial**, sin tocar el original. *Hecho el 23 de noviembre de 2026* (323 commits, sin remoto). Lo que sigue lo detalla el `PLAN-CURSO.md` del curso, con las 11 decisiones del autor de ese día (entre ellas: reescribir al principio el historial para quitar el correo personal, con copia antes, y pedir al kit un ejecutor de Java en paralelo).
 2. Quitar lo que pasa al inicial y rehacer el arranque: el curso empieza por instalar el JDK y recomienda «haber hecho el curso inicial».
    - **Terminal:** el curso original pone PowerShell y bash lado a lado (en el 01.04 y otros módulos). Como el curso inicial enseña **bash para todos** (Git Bash en Windows), se pasa a bash y se enlaza al inicial (decisión 9 del apartado 10). Revisar también lo que no funcione en el bash 3.2 de macOS, las salidas de Git y otros comandos (en español) y la rama principal (`main`).
 3. Recortar la parte general de los módulos de la tabla y enlazar al inicial (con el formato de enlace entre cursos del contrato, apartado 8.1).
@@ -363,6 +363,8 @@ Es el orden en que se hacen las cosas, no el que sigue el alumno. Se trabaja en 
 | 10 | **Entrevistas en Java** | `Cursos/curso-entrevistas-java/` | Corrección automática, mucha reutilización |
 | 11 | **Según el interés del autor** | | Frontend (React y luego Angular) · Kotlin · Arquitectura · ramas de Python · DevOps |
 | 12 | **Si apetece** | | Lógica para jóvenes |
+
+**Estado a 23 de noviembre de 2026:** pasos 0 a 4 hechos; el **pack base 1.0 está publicado** (academia, kit y curso inicial, con sus *releases*; detalle en [`ESTADO.md`](ESTADO.md)). **Paso 5 en marcha:** `Cursos/curso-java/` creado ese día (apartado 6.3, paso 1) y en el paso 2 de su `PLAN-CURSO.md`.
 
 Los puestos 6 a 12 son orientativos, igual que los nombres de las carpetas de los cursos futuros. Cada curso y cada versión de la academia se publican en GitHub con su versión.
 
@@ -537,7 +539,9 @@ Hitos H1 a H5 cerrados e integrados en `main`; H6 (uso real por el propietario) 
 
 Se hace en cada repositorio antes de su primer `push`, y la academia y el curso de Java con más cuidado, porque se copian **con su historial** y todo él queda público:
 
-- Revisar el **historial completo** con `gitleaks` (claves, `.env`, datos personales).
+- Revisar el **historial completo** con `gitleaks` (claves, `.env`, datos personales), y que los commits lleven el correo `noreply` de GitHub, no el personal (si no, se reescribe el historial con copia antes; el curso de Java lo hace al empezar su adaptación, decisión del autor del 23 de noviembre de 2026).
+- **Etiquetas de versión** (regla del autor, 23 de noviembre de 2026): antes de publicar, la etiqueta solo se mueve si cambia el producto (código, contenido, README o licencias); **una versión publicada no se mueve nunca**: si cambia el producto, sale versión nueva (entrada en `CHANGELOG.md`, etiqueta y *release*). Los commits que solo tocan `ESTADO.md` van con el push de `main`.
+- **Orden al publicar:** primero lo que otros enlazan (el kit antes que los cursos, porque enlazan a su `FORMATO.md`), y comprobar esos enlaces justo después del push.
 - **Historial de la academia sin el curso de Java:** su historial, clonado de Code Academy, sigue llevando el curso de Java entero (`content/java`, unos 22.900 ficheros) aunque desde T3 ya no esté en Git (9 de noviembre de 2026). Publicado tal cual, el repositorio pesa mucho y el texto de Java sale ahí antes que en su propio repositorio. **Decidido por el autor (16 de noviembre de 2026): se reescribe el historial para quitarlo antes del primer `push`, en H11, con una copia del repositorio guardada antes.**
 - **Etiquetas de los cursos** (decidido por el autor el 16 de noviembre de 2026): un curso no se etiqueta hasta que está completo y aprobado; el curso inicial, `v1.0.0` para el pack base 1.0. Mientras tanto, la academia lo instala desde un commit.
 - Quitar rutas absolutas (el `PLAN.md` de Code Academy tiene una `/home/...`) y poner al día lo desactualizado (su README dice que H4 está pendiente de integrar).

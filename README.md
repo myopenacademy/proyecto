@@ -25,6 +25,7 @@ Los proyectos se crean en el orden de [`PLAN.md`](PLAN.md#7-orden-de-trabajo); d
 | La academia (`Academia/`) | [santi-cast/myopenacademy](https://github.com/santi-cast/myopenacademy) |
 | El kit (`Cursos/kit-cursos/`) | [myopenacademy/kit-cursos](https://github.com/myopenacademy/kit-cursos) |
 | El curso inicial (`Cursos/curso-inicial/`) | [myopenacademy/curso-inicial](https://github.com/myopenacademy/curso-inicial) |
+| El curso de Java (`Cursos/curso-java/`) | `myopenacademy/curso-java`, sin publicar todavía |
 | Esta planificación común | [myopenacademy/proyecto](https://github.com/myopenacademy/proyecto) |
 
 ## Cómo se relacionan
