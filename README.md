@@ -18,7 +18,14 @@ Proyecto Academia/                ← planificación común (este repositorio)
     └── curso-…/                  ← un proyecto por curso
 ```
 
-Hoy solo existe la planificación. Los proyectos se crean en el orden de [`PLAN.md`](PLAN.md#7-orden-de-trabajo); dónde estamos, en [`ESTADO.md`](ESTADO.md).
+Los proyectos se crean en el orden de [`PLAN.md`](PLAN.md#7-orden-de-trabajo); dónde estamos, en [`ESTADO.md`](ESTADO.md). Cada uno se publica en su propio repositorio de GitHub:
+
+| Proyecto | Repositorio |
+|---|---|
+| La academia (`Academia/`) | [santi-cast/myopenacademy](https://github.com/santi-cast/myopenacademy) |
+| El kit (`Cursos/kit-cursos/`) | [myopenacademy/kit-cursos](https://github.com/myopenacademy/kit-cursos) |
+| El curso inicial (`Cursos/curso-inicial/`) | [myopenacademy/curso-inicial](https://github.com/myopenacademy/curso-inicial) |
+| Esta planificación común | [myopenacademy/proyecto](https://github.com/myopenacademy/proyecto) |
 
 ## Cómo se relacionan
 
@@ -57,3 +64,11 @@ Del aprendizaje de dos proyectos anteriores, que se quedan donde están como arc
 - **Code Academy** (`../Code Academy/`): la academia construida a medida de ese curso. Es la base de `Academia/`.
 
 Esas dos rutas relativas solo se usan para crear los proyectos nuevos; cuando estén creados, nada de aquí depende de ellas.
+
+## Cómo se ha hecho
+
+Este proyecto se planifica y se construye **con ayuda de inteligencia artificial**: una sesión de un asistente de IA por proyecto, coordinadas desde esta carpeta, y el autor revisa y aprueba cada paso. Estos ficheros son el registro del trabajo: [`PLAN.md`](PLAN.md) (las decisiones y su porqué), [`ESTADO.md`](ESTADO.md) (qué se hizo y cuándo) y [`CLAUDE.md`](CLAUDE.md) (las instrucciones que siguen los asistentes). Las rutas a carpetas hermanas (`Academia/`, `Cursos/…` y los proyectos de origen) son las de la máquina del autor; cada proyecto está en su repositorio, enlazado arriba.
+
+## Licencia
+
+El texto de este repositorio se publica con [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.es). Detalles en [`LICENSE`](LICENSE).
