@@ -28,6 +28,8 @@ Los proyectos se crean en el orden de [`PLAN.md`](PLAN.md#7-orden-de-trabajo); d
 | El curso de Java (`Cursos/curso-java/`) | `myopenacademy/curso-java`, sin publicar todavía |
 | Esta planificación común | [myopenacademy/proyecto](https://github.com/myopenacademy/proyecto) |
 
+La organización se presenta en [github.com/myopenacademy](https://github.com/myopenacademy) (repositorio `myopenacademy/.github`).
+
 ## Cómo se relacionan
 
 - **Los cursos usan el kit** desde `../kit-cursos/`: una mejora del kit llega a todos los cursos.
