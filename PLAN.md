@@ -213,16 +213,19 @@ flowchart TD
 - No se divide en «básico, intermedio y avanzado», sino **por lo que se aprende**.
 - **Se dividen:** Java, Python y frontend. **Quizá:** arquitectura y Kotlin, si pasan de unos 60 módulos. **No:** curso inicial, SQL, Git, entrevistas e IA con Java.
 
-**Borrador para Java** (por los nombres de las fases; hay que comprobar que cada corte cae en un sitio natural):
+**Partes de Java** (decididas por el autor el 24 de noviembre de 2026, a propuesta del curso: el borrador de 6 partes, con la IA separada de microservicios y despliegue; cortes comprobados frente a las etapas del proyecto, cada una detrás de todo lo que necesita). Horas aproximadas del curso de Java a esa fecha. El índice del curso agrupa por estas partes (paso 8 de su plan):
 
-| Parte | Fases del curso original | Qué sabe hacer el alumno al acabar |
-|---|---|---|
-| 1. El lenguaje Java | 01 (lo que queda) a 05 | Programar en Java: fundamentos, POO, colecciones, funcional |
-| 2. Java avanzado | 06 a 08 | Concurrencia, redes, reflexión, patrones, interfaces gráficas |
-| 3. Datos y web | 09 y 10 | Bases de datos y web sin *frameworks* |
-| 4. Spring Boot | 11 a 16 | Aplicaciones y APIs profesionales con Spring |
-| 5. Microservicios, despliegue e IA | 17 a 19 | Llevar aplicaciones a producción y añadirles IA |
-| 6. Desarrollo profesional | 20 | Trabajar en equipo, entrevistas, portfolio |
+| Parte | Fases del curso de Java | Horas | Qué sabe hacer el alumno al acabar |
+|---|---|---|---|
+| 1. El lenguaje Java | 01 a 05 | 238 | Programar en Java: fundamentos, POO, colecciones, funcional |
+| 2. Java avanzado | 06 a 08 | 89 | Concurrencia, redes, reflexión, patrones, interfaces gráficas |
+| 3. Datos y web | 09 y 10 | 72 | Bases de datos y web sin *frameworks* |
+| 4. Spring Boot | 11 a 16 | 213 | Aplicaciones y APIs profesionales con Spring |
+| 5. Microservicios y despliegue | 17 y 18 | 68 | Llevar aplicaciones a producción |
+| 6. IA con Spring AI | 19 | 49 | Añadir IA a una aplicación con Spring AI |
+| 7. Desarrollo profesional | 20 | 28 | Trabajar en equipo, entrevistas, portfolio |
+
+La parte 1 es la más grande; si en la academia se hace larga, se puede partir en 01-03 y 04-05.
 
 ## 5. El curso inicial común
 
